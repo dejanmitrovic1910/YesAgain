@@ -1,0 +1,1806 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "slideshow": {
+      "type": "slideshow",
+      "blocks": {
+        "slide-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/banner-1-gradient-3_1-2_1.png",
+            "mobile_image": "shopify://shop_images/banner-mobile-1-gradient-1_1.png",
+            "content_max_width": 460,
+            "mobile_text_position": "place-self-end-center text-center",
+            "desktop_text_position": "sm:place-self-center-start sm:text-start",
+            "subheading": "Experience Premium Refurbished MacBooks and Laptops – As Good as New!",
+            "title": "Quality You Can Trust",
+            "heading_tag": "h2",
+            "button_text": "Discover Unbeatable Prices",
+            "button_link": "",
+            "text_color": "#ffffff",
+            "button_background": "#ffb74a",
+            "button_text_color": "#ffffff",
+            "overlay_color": "#ffffff",
+            "overlay_opacity": 0,
+            "background": "",
+            "background_gradient": ""
+          }
+        },
+        "image_MY96ti": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/banner-2-gradient-6_1.jpg",
+            "mobile_image": "shopify://shop_images/banner-mobile-2-gradient-1_1.jpg",
+            "content_max_width": 400,
+            "mobile_text_position": "place-self-start-center text-center",
+            "desktop_text_position": "sm:place-self-center-start sm:text-start",
+            "subheading": "Join Us in Our Mission to Save the Planet – Choose Refurbished and Reduce Waste!",
+            "title": "Commitment to Sustainability",
+            "heading_tag": "h2",
+            "button_text": "Our Eco-Friendly Process",
+            "button_link": "",
+            "text_color": "#112747",
+            "button_background": "#112747",
+            "button_text_color": "#ffffff",
+            "overlay_color": "#ffb74a",
+            "overlay_opacity": 0,
+            "background": "",
+            "background_gradient": ""
+          }
+        },
+        "image_Camr94": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/slide-3-new-4_1.jpg",
+            "mobile_image": "shopify://shop_images/slide-3-new-mobile_1.webp",
+            "content_max_width": 400,
+            "mobile_text_position": "place-self-end-center text-center",
+            "desktop_text_position": "sm:place-self-center-start sm:text-start",
+            "subheading": "Backed by 40 Years of Expertise – We Set the Standards in Refurbished Tech!",
+            "title": "Unmatched Expertise",
+            "heading_tag": "h2",
+            "button_text": "Why Choose YesAgain?",
+            "button_link": "",
+            "text_color": "#ffffff",
+            "button_background": "#1a1a1a",
+            "button_text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0,
+            "background": "",
+            "background_gradient": ""
+          }
+        },
+        "image_mcJkbW": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/slide_4-_12_1.jpg",
+            "mobile_image": "shopify://shop_images/slide-4_-2-m_1.jpg",
+            "content_max_width": 420,
+            "mobile_text_position": "place-self-end-center text-center",
+            "desktop_text_position": "sm:place-self-center-start sm:text-start",
+            "subheading": "Serving Europe and the Middle East – Your Trusted Source for Refurbished Tech",
+            "title": "Global Reach, Local Impact",
+            "heading_tag": "h2",
+            "button_text": "Explore Our Products!",
+            "button_link": "shopify://collections/all",
+            "text_color": "#1a1a1a",
+            "button_background": "#ffb74a",
+            "button_text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0,
+            "background": "",
+            "background_gradient": ""
+          }
+        }
+      },
+      "block_order": [
+        "slide-1",
+        "image_MY96ti",
+        "image_Camr94",
+        "image_mcJkbW"
+      ],
+      "custom_css": [
+        ".prose {display: flex; flex-direction: column;}",
+        ".prose .subheading {order: 3; margin-block-start: 15px !important; font-weight: normal;}",
+        ".prose .button {order: 5;}"
+      ],
+      "settings": {
+        "full_width": true,
+        "allow_transparent_header": false,
+        "show_initial_transition": false,
+        "image_size": "auto",
+        "controls_type": "dots",
+        "transition_type": "fade_with_text",
+        "autoplay": false,
+        "cycle_speed": 4,
+        "background": "#ffffff",
+        "background_gradient": ""
+      }
+    },
+    "text_with_icons_TLWd96": {
+      "type": "text-with-icons",
+      "blocks": {
+        "item_d3jztg": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-truck",
+            "mobile_icon_width": 24,
+            "icon_width": 28,
+            "icon_background_type": "circle",
+            "icon_background": "#112747",
+            "icon_color": "#ffb74a",
+            "title": "Free Shipping",
+            "content": ""
+          }
+        },
+        "item_Jxqnfc": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-return",
+            "mobile_icon_width": 24,
+            "icon_width": 28,
+            "icon_background_type": "circle",
+            "icon_background": "#112747",
+            "icon_color": "#ffb74a",
+            "title": "30 Days To Return",
+            "content": ""
+          }
+        },
+        "item_gCrwrz": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-validation",
+            "mobile_icon_width": 24,
+            "icon_width": 32,
+            "icon_background_type": "circle",
+            "icon_background": "#112747",
+            "icon_color": "#ffb74a",
+            "title": "Warranty: Up to 2 Years",
+            "content": ""
+          }
+        }
+      },
+      "block_order": [
+        "item_d3jztg",
+        "item_Jxqnfc",
+        "item_gCrwrz"
+      ],
+      "custom_css": [
+        ".section-full {padding-top: 25px; padding-bottom: 45px;}",
+        ".text-with-icons__item {display: flex; justify-content: center; align-items: center; padding: 2px 0;}",
+        ".icon-block {outline: 7px solid #ffb74a; outline-offset: -6px;}"
+      ],
+      "settings": {
+        "full_width": true,
+        "stack_on_mobile": false,
+        "title": "",
+        "heading_tag": "h6",
+        "text_alignment": "start",
+        "icon_spacing": "small",
+        "background": "#ffffff",
+        "background_gradient": "",
+        "text_color": "#112747"
+      }
+    },
+    "featured_collection_r3WDTz": {
+      "type": "featured-collection",
+      "settings": {
+        "collection": "best-sellers",
+        "products": [],
+        "full_width": true,
+        "stack_products": false,
+        "show_progress_bar": true,
+        "products_count": 12,
+        "products_per_row_mobile": "2",
+        "products_per_row_desktop": 5,
+        "subheading": "",
+        "title": "Hot Sale",
+        "content": "<p>Best Prices on Refurbished Tech!</p>",
+        "link_url": "",
+        "link_text": "View all",
+        "background": "#f7fafd",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "#1a1a1a",
+        "heading_gradient": "",
+        "product_card_background": "",
+        "product_card_text_color": ""
+      }
+    },
+    "collection_list_bkMbAD": {
+      "type": "collection-list",
+      "blocks": {
+        "collection_jFMnNC": {
+          "type": "collection",
+          "settings": {
+            "collection": "apple",
+            "image": "shopify://shop_images/apple-category-1_1.png",
+            "subheading": "",
+            "title": "Apple",
+            "url": "",
+            "heading_tag": "h5",
+            "text_position": "place-self-center text-center",
+            "text_color": "#041525",
+            "overlay_color": "#ffffff",
+            "overlay_opacity": 25
+          }
+        },
+        "collection_HKckFj": {
+          "type": "collection",
+          "settings": {
+            "collection": "laptops",
+            "image": "shopify://shop_images/category-windows-laptops-1_1.png",
+            "subheading": "",
+            "title": "Windows Laptops",
+            "url": "",
+            "heading_tag": "h5",
+            "text_position": "place-self-center text-center",
+            "text_color": "#041525",
+            "overlay_color": "#112747",
+            "overlay_opacity": 0
+          }
+        },
+        "collection_UUP3Xt": {
+          "type": "collection",
+          "settings": {
+            "collection": "laptops",
+            "image": "shopify://shop_images/category-tablets_1.png",
+            "subheading": "",
+            "title": "Laptops",
+            "url": "",
+            "heading_tag": "h5",
+            "text_position": "place-self-center text-center",
+            "text_color": "#041525",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        },
+        "collection_nAAPJK": {
+          "type": "collection",
+          "settings": {
+            "collection": "chromebooks",
+            "image": "shopify://shop_images/categoy-chromebooks_1.png",
+            "subheading": "",
+            "title": "Chromebooks",
+            "url": "",
+            "heading_tag": "h5",
+            "text_position": "place-self-center text-center",
+            "text_color": "#041525",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        },
+        "collection_9wzBPm": {
+          "type": "collection",
+          "settings": {
+            "collection": "desktop",
+            "image": "shopify://shop_images/category-desktop_1.png",
+            "subheading": "",
+            "title": "Desktop",
+            "url": "",
+            "heading_tag": "h5",
+            "text_position": "place-self-center text-center",
+            "text_color": "#041525",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        },
+        "collection_j6rFfY": {
+          "type": "collection",
+          "settings": {
+            "collection": "monitors",
+            "image": "shopify://shop_images/category-monitors_1.png",
+            "subheading": "",
+            "title": "Monitors",
+            "url": "",
+            "heading_tag": "h5",
+            "text_position": "place-self-center text-center",
+            "text_color": "#041525",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        }
+      },
+      "block_order": [
+        "collection_jFMnNC",
+        "collection_HKckFj",
+        "collection_UUP3Xt",
+        "collection_nAAPJK",
+        "collection_9wzBPm",
+        "collection_j6rFfY"
+      ],
+      "custom_css": [
+        ".content-over-media {display: block;}",
+        ".collection-card__content:first-child {margin-block-end: 0;}",
+        ".collection-card {background-color: white; border-radius: 10px;}",
+        ".collection-card img {width: 50%; margin: 50px auto 30px; height: 100%;}",
+        "@media (max-width: 699px) {.collection-card img {margin: 30px auto 20px; }}",
+        "@media (min-width: 700px) {.bg-custom {padding-top: 65px; padding-bottom: 50px; }}"
+      ],
+      "settings": {
+        "full_width": true,
+        "stack_collections": false,
+        "collections_metafields": false,
+        "collections_per_row_mobile": "2",
+        "collections_per_row": 5,
+        "show_progress_bar": true,
+        "subheading": "",
+        "title": "Shop Certified Renewed Products",
+        "content": "<p>Top Brands, Renewed for Less.</p>",
+        "link_url": "",
+        "link_text": "",
+        "background": "#ffffff",
+        "background_gradient": "",
+        "text_color": "#041525",
+        "heading_color": "#112747",
+        "heading_gradient": ""
+      }
+    },
+    "rich_text_7UWq7y": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_HPY4Ut": {
+          "type": "heading",
+          "settings": {
+            "text": "Certified renewed MacBook",
+            "heading_tag": "h2",
+            "text_color": "",
+            "gradient": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading_HPY4Ut"
+      ],
+      "disabled": true,
+      "custom_css": [],
+      "settings": {
+        "full_width": true,
+        "content_width": "large",
+        "text_position": "start",
+        "background": "#ffffff",
+        "background_gradient": "",
+        "text_color": "#112747"
+      }
+    },
+    "media_grid_WFyUpV": {
+      "type": "media-grid",
+      "blocks": {
+        "image_TERc89": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/macbook-category-section-3_1.jpg",
+            "title": "Certified renewed MacBook",
+            "heading_tag": "h2",
+            "link_url": "shopify://collections/all",
+            "link_text": "Check More",
+            "mobile_text_position": "place-self-center text-center",
+            "desktop_column_span": 2,
+            "desktop_row_span": 3,
+            "desktop_text_position": "sm:place-self-start sm:text-start",
+            "background": "rgba(0,0,0,0)",
+            "background_gradient": "",
+            "text_color": "#ffffff",
+            "text_gradient": "",
+            "button_background": "#ffb74a",
+            "button_text_color": "#ffffff",
+            "overlay_color": "#1a1a1a",
+            "overlay_opacity": 5
+          }
+        },
+        "image_WgP86A": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/product-2-1_1.webp",
+            "title": "Customized MacBook Air - 2014 [price]",
+            "heading_tag": "h5",
+            "link_url": "shopify://products/customized-macbook-air-2014",
+            "link_text": "",
+            "mobile_text_position": "place-self-end-center text-center",
+            "desktop_column_span": 2,
+            "desktop_row_span": 1,
+            "desktop_text_position": "sm:place-self-center-start sm:text-start",
+            "background": "#ffffff",
+            "background_gradient": "",
+            "text_color": "#112747",
+            "text_gradient": "",
+            "button_background": "#000000",
+            "button_text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        },
+        "image_QkwRWR": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/product-1-1_1.webp",
+            "title": "Apple MacBook Pro - 2019 i9 Silver 16 [price]",
+            "heading_tag": "h5",
+            "link_url": "shopify://products/apple-macbook-pro-2019-i9-silver-16",
+            "link_text": "",
+            "mobile_text_position": "place-self-end-center text-center",
+            "desktop_column_span": 2,
+            "desktop_row_span": 1,
+            "desktop_text_position": "sm:place-self-center-end sm:text-end",
+            "background": "#ffffff",
+            "background_gradient": "",
+            "text_color": "#112747",
+            "text_gradient": "",
+            "button_background": "#000000",
+            "button_text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        },
+        "image_NL4Jtm": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Frame_1_40.webp",
+            "title": "MacBook Air - 2017 [price]",
+            "heading_tag": "h5",
+            "link_url": "shopify://products/macbook-air-2017",
+            "link_text": "",
+            "mobile_text_position": "place-self-end-center text-center",
+            "desktop_column_span": 2,
+            "desktop_row_span": 1,
+            "desktop_text_position": "sm:place-self-center-start sm:text-start",
+            "background": "#ffffff",
+            "background_gradient": "",
+            "text_color": "#112747",
+            "text_gradient": "",
+            "button_background": "#000000",
+            "button_text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        }
+      },
+      "block_order": [
+        "image_TERc89",
+        "image_WgP86A",
+        "image_QkwRWR",
+        "image_NL4Jtm"
+      ],
+      "custom_css": [],
+      "settings": {
+        "full_width": true,
+        "reduce_width": true,
+        "desktop_row_height": 400,
+        "mobile_row_height": 260,
+        "background": "#f7fafd",
+        "background_gradient": ""
+      }
+    },
+    "rich_text_GcTDFc": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_DwjVHf": {
+          "type": "heading",
+          "settings": {
+            "text": "Certified renewed Airpods",
+            "heading_tag": "h2",
+            "text_color": "",
+            "gradient": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading_DwjVHf"
+      ],
+      "disabled": true,
+      "custom_css": [],
+      "name": "Rich text",
+      "settings": {
+        "full_width": true,
+        "content_width": "small",
+        "text_position": "start",
+        "background": "",
+        "background_gradient": "",
+        "text_color": "#1a1a1a"
+      }
+    },
+    "media_grid_iUb3B4": {
+      "type": "media-grid",
+      "blocks": {
+        "image_chL3P9": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/AccessoriesFinalSize_35.webp",
+            "title": "Apple AirPods Pro [price]",
+            "heading_tag": "h5",
+            "link_url": "shopify://products/airpods-pro",
+            "link_text": "",
+            "mobile_text_position": "place-self-end-center text-center",
+            "desktop_column_span": 2,
+            "desktop_row_span": 1,
+            "desktop_text_position": "sm:place-self-center-end sm:text-end",
+            "background": "#ffffff",
+            "background_gradient": "",
+            "text_color": "#1a1a1a",
+            "text_gradient": "",
+            "button_background": "#000000",
+            "button_text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        },
+        "image_LYULpm": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/airpods-banner_1.jpg",
+            "title": "Certified renewed Airpods",
+            "heading_tag": "h2",
+            "link_url": "shopify://collections/airpods",
+            "link_text": "Check More",
+            "mobile_text_position": "place-self-center text-center",
+            "desktop_column_span": 2,
+            "desktop_row_span": 3,
+            "desktop_text_position": "sm:place-self-start-end sm:text-end",
+            "background": "rgba(0,0,0,0)",
+            "background_gradient": "",
+            "text_color": "#ffffff",
+            "text_gradient": "",
+            "button_background": "#ffb74a",
+            "button_text_color": "#ffffff",
+            "overlay_color": "#1a1a1a",
+            "overlay_opacity": 20
+          }
+        },
+        "image_QYyBpi": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/WhatsApp_Image_2024-08-05_at_10.43.42_31d72d00.webp",
+            "title": "Apple AirPods Pro 2nd Gen [price]",
+            "heading_tag": "h5",
+            "link_url": "shopify://products/apple-airpods-pro-2nd-gen",
+            "link_text": "",
+            "mobile_text_position": "place-self-end-center text-center",
+            "desktop_column_span": 2,
+            "desktop_row_span": 1,
+            "desktop_text_position": "sm:place-self-center-start sm:text-start",
+            "background": "#ffffff",
+            "background_gradient": "",
+            "text_color": "#1a1a1a",
+            "text_gradient": "",
+            "button_background": "#000000",
+            "button_text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        },
+        "image_fihKHJ": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/AccessoriesFinalSize_11_53e6e0df-5950-4292-a98b-eb8b0bf5b987.webp",
+            "title": "Apple AirPods 3rd Gen Lightning Charging Case [price]",
+            "heading_tag": "h5",
+            "link_url": "shopify://products/apple-airpods-pro-2nd-gen-1",
+            "link_text": "",
+            "mobile_text_position": "place-self-end-center text-center",
+            "desktop_column_span": 2,
+            "desktop_row_span": 1,
+            "desktop_text_position": "sm:place-self-center-end sm:text-end",
+            "background": "#ffffff",
+            "background_gradient": "",
+            "text_color": "#1a1a1a",
+            "text_gradient": "",
+            "button_background": "#000000",
+            "button_text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        }
+      },
+      "block_order": [
+        "image_chL3P9",
+        "image_LYULpm",
+        "image_QYyBpi",
+        "image_fihKHJ"
+      ],
+      "name": "Media grid",
+      "settings": {
+        "full_width": true,
+        "reduce_width": true,
+        "desktop_row_height": 400,
+        "mobile_row_height": 260,
+        "background": "#f7fafd",
+        "background_gradient": ""
+      }
+    },
+    "rich_text_rQTGK7": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_YLtKec": {
+          "type": "heading",
+          "settings": {
+            "text": "Certified renewed Apple Watch",
+            "heading_tag": "h2",
+            "text_color": "",
+            "gradient": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading_YLtKec"
+      ],
+      "disabled": true,
+      "custom_css": [],
+      "name": "Rich text",
+      "settings": {
+        "full_width": true,
+        "content_width": "small",
+        "text_position": "start",
+        "background": "",
+        "background_gradient": "",
+        "text_color": ""
+      }
+    },
+    "media_grid_iWT4bB": {
+      "type": "media-grid",
+      "blocks": {
+        "image_LGamkc": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/apple-watches-banner-1_1.jpg",
+            "title": "Certified renewed Apple Watch",
+            "heading_tag": "h2",
+            "link_url": "shopify://collections/apple-watches",
+            "link_text": "Check More",
+            "mobile_text_position": "place-self-end-center text-center",
+            "desktop_column_span": 2,
+            "desktop_row_span": 3,
+            "desktop_text_position": "sm:place-self-start sm:text-start",
+            "background": "rgba(0,0,0,0)",
+            "background_gradient": "",
+            "text_color": "#ffffff",
+            "text_gradient": "",
+            "button_background": "#ffb74a",
+            "button_text_color": "#ffffff",
+            "overlay_color": "#1a1a1a",
+            "overlay_opacity": 15
+          }
+        },
+        "image_PBFTdh": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/product-5-6_1.webp",
+            "title": "Apple Watch Ultra 2 Black [price]",
+            "heading_tag": "h5",
+            "link_url": "shopify://products/apple-watch-ultra-2",
+            "link_text": "",
+            "mobile_text_position": "place-self-end-center text-center",
+            "desktop_column_span": 2,
+            "desktop_row_span": 1,
+            "desktop_text_position": "sm:place-self-center-start sm:text-start",
+            "background": "#ffffff",
+            "background_gradient": "",
+            "text_color": "#1a1a1a",
+            "text_gradient": "",
+            "button_background": "#000000",
+            "button_text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        },
+        "image_6EkxBV": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/product-5-1_1.webp",
+            "title": "Apple Watch Ultra 2 Black [price]",
+            "heading_tag": "h5",
+            "link_url": "shopify://products/apple-watch-ultra-2",
+            "link_text": "",
+            "mobile_text_position": "place-self-end-center text-center",
+            "desktop_column_span": 2,
+            "desktop_row_span": 1,
+            "desktop_text_position": "sm:place-self-center-end sm:text-end",
+            "background": "#ffffff",
+            "background_gradient": "",
+            "text_color": "#1a1a1a",
+            "text_gradient": "",
+            "button_background": "#000000",
+            "button_text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        },
+        "image_NQdUCr": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Frame2607594_34.webp",
+            "title": "Apple Watch Series 8 45mm [price]",
+            "heading_tag": "h5",
+            "link_url": "shopify://products/apple-airpods-pro-2nd-gen-1",
+            "link_text": "",
+            "mobile_text_position": "place-self-end-center text-center",
+            "desktop_column_span": 2,
+            "desktop_row_span": 1,
+            "desktop_text_position": "sm:place-self-center-start sm:text-start",
+            "background": "#ffffff",
+            "background_gradient": "",
+            "text_color": "#1a1a1a",
+            "text_gradient": "",
+            "button_background": "#000000",
+            "button_text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        }
+      },
+      "block_order": [
+        "image_LGamkc",
+        "image_PBFTdh",
+        "image_6EkxBV",
+        "image_NQdUCr"
+      ],
+      "name": "Media grid",
+      "settings": {
+        "full_width": true,
+        "reduce_width": true,
+        "desktop_row_height": 400,
+        "mobile_row_height": 260,
+        "background": "#f7fafd",
+        "background_gradient": ""
+      }
+    },
+    "rich_text_iFjGxb": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_7h4Kx6": {
+          "type": "heading",
+          "settings": {
+            "text": "Accessory",
+            "heading_tag": "h2",
+            "text_color": "",
+            "gradient": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading_7h4Kx6"
+      ],
+      "disabled": true,
+      "name": "Rich text",
+      "settings": {
+        "full_width": true,
+        "content_width": "small",
+        "text_position": "start",
+        "background": "",
+        "background_gradient": "",
+        "text_color": ""
+      }
+    },
+    "media_grid_ybJ4FM": {
+      "type": "media-grid",
+      "blocks": {
+        "image_Kx88Qm": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/07_153af992-c501-4297-9689-c86010b13761.webp",
+            "title": "85W L Connector Magsafe Power Adaptor [price]",
+            "heading_tag": "h5",
+            "link_url": "shopify://products/85w-l-connector-magsafe-power-adaptor",
+            "link_text": "",
+            "mobile_text_position": "place-self-end-center text-center",
+            "desktop_column_span": 2,
+            "desktop_row_span": 1,
+            "desktop_text_position": "sm:place-self-center-start sm:text-start",
+            "background": "#ffffff",
+            "background_gradient": "",
+            "text_color": "#1a1a1a",
+            "text_gradient": "",
+            "button_background": "#000000",
+            "button_text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        },
+        "image_7hCqRP": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/accesories-banner-1_1.jpg",
+            "title": "Accessory",
+            "heading_tag": "h2",
+            "link_url": "shopify://collections/accessories",
+            "link_text": "Check More",
+            "mobile_text_position": "place-self-end-center text-center",
+            "desktop_column_span": 2,
+            "desktop_row_span": 3,
+            "desktop_text_position": "sm:place-self-start-end sm:text-end",
+            "background": "rgba(0,0,0,0)",
+            "background_gradient": "",
+            "text_color": "#ffffff",
+            "text_gradient": "",
+            "button_background": "#ffb74a",
+            "button_text_color": "#ffffff",
+            "overlay_color": "#1a1a1a",
+            "overlay_opacity": 15
+          }
+        },
+        "image_kYxWRn": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/2_bf8dd5b9-cbe6-41b5-930b-d007590076f9.webp",
+            "title": "Awei CL-122T Type-C Hub to USB 2.0 with 4 Ports - Space Gray [price]",
+            "heading_tag": "h5",
+            "link_url": "shopify://products/awei-cl-122t-type-c-hub-to-usb-2-0-with-4-ports-space-gray",
+            "link_text": "",
+            "mobile_text_position": "place-self-end-center text-center",
+            "desktop_column_span": 2,
+            "desktop_row_span": 1,
+            "desktop_text_position": "sm:place-self-center-end sm:text-end",
+            "background": "#ffffff",
+            "background_gradient": "",
+            "text_color": "#1a1a1a",
+            "text_gradient": "",
+            "button_background": "#000000",
+            "button_text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        },
+        "image_VmhWxK": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/case-iphone-11-pro-max_jpg.webp",
+            "title": "Case iPhone 11 Pro Black [price]",
+            "heading_tag": "h5",
+            "link_url": "shopify://products/case-iphone-11-pro-black",
+            "link_text": "",
+            "mobile_text_position": "place-self-end-center text-center",
+            "desktop_column_span": 2,
+            "desktop_row_span": 1,
+            "desktop_text_position": "sm:place-self-center-start sm:text-start",
+            "background": "#ffffff",
+            "background_gradient": "",
+            "text_color": "#1a1a1a",
+            "text_gradient": "",
+            "button_background": "#000000",
+            "button_text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        }
+      },
+      "block_order": [
+        "image_Kx88Qm",
+        "image_7hCqRP",
+        "image_kYxWRn",
+        "image_VmhWxK"
+      ],
+      "name": "Media grid",
+      "settings": {
+        "full_width": true,
+        "reduce_width": true,
+        "desktop_row_height": 400,
+        "mobile_row_height": 260,
+        "background": "#f7fafd",
+        "background_gradient": ""
+      }
+    },
+    "images_with_text_scrolling_4EVxtQ": {
+      "type": "images-with-text-scrolling",
+      "blocks": {
+        "item_YnD3py": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/apple-category-1_1.webp",
+            "icon": "none",
+            "icon_width": 48,
+            "title": "Certified. Original. Expert-Approved.",
+            "content": "<p>All our devices are guaranteed to be original and go through detailed testing by certified experts. Every product is carefully inspected for performance, appearance, and reliability to ensure it meets strict quality standards. With us, you get genuine, expert-verified tech you can trust.</p>"
+          }
+        },
+        "item_wg6XwU": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/benefits-section-1_1.jpg",
+            "icon": "picto-coupon",
+            "custom_icon": "shopify://shop_images/ChatGPT_Image_May_19_2025_01_38_19_PM_1.png",
+            "icon_width": 52,
+            "title": "100% Authentic Products",
+            "content": "<p>We only sell original devices sourced from verified and trusted suppliers. You’ll never find counterfeits or unauthorized tech in our store. Each product retains the quality and design intended by the manufacturer, so you can be sure you're getting the real thing — reliable, genuine, and built to last.</p>"
+          }
+        },
+        "item_8iy6xG": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/benefits-section-2_1.jpg",
+            "icon": "none",
+            "custom_icon": "shopify://shop_images/benefits-section-svg-2_1.png",
+            "icon_width": 60,
+            "title": "Expert Testing & Certification",
+            "content": "<p>Every device goes through a detailed inspection and testing process conducted by certified professionals. We check all key functions — from internal components and battery health to screen responsiveness and software performance — to make sure it meets our strict reliability standards before it ever reaches you.</p>"
+          }
+        },
+        "item_hkN6yB": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/benefits-section-3_1.jpg",
+            "icon": "none",
+            "custom_icon": "shopify://shop_images/benefits-section-svg-3_1.png",
+            "icon_width": 72,
+            "title": "Strict Quality Standards",
+            "content": "<p>Our quality control process is designed to catch even the smallest issues. Devices are reviewed for both performance and appearance, ensuring strong battery life, smooth operation, and minimal wear. We only approve products that meet our high standards — giving you tech that feels nearly new.</p>"
+          }
+        },
+        "item_37iwP7": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/benefits-section-4_1.jpg",
+            "icon": "none",
+            "custom_icon": "shopify://shop_images/benefits-section-svg-4_1.png",
+            "icon_width": 60,
+            "title": "Peace of Mind Guarantee",
+            "content": "<p>With every device tested, verified, and backed by warranty, you can shop with full confidence. We stand behind the quality of our products, and if anything falls short, we’re here to make it right. It’s expert-approved tech with the reassurance you deserve.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "item_YnD3py",
+        "item_wg6XwU",
+        "item_8iy6xG",
+        "item_hkN6yB",
+        "item_37iwP7"
+      ],
+      "settings": {
+        "full_width": true,
+        "stack_on_mobile": false,
+        "show_counter": false,
+        "desktop_image_effect": "fade",
+        "image_position": "end",
+        "background": "#ffffff",
+        "background_gradient": "",
+        "text_color": "rgba(0,0,0,0)",
+        "heading_color": "#112747",
+        "heading_gradient": ""
+      }
+    },
+    "text_with_icons_8VYnMg": {
+      "type": "text-with-icons",
+      "blocks": {
+        "item_cyhMUD": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-star",
+            "mobile_icon_width": 24,
+            "icon_width": 32,
+            "icon_background_type": "circle",
+            "icon_background": "#ffb74a",
+            "icon_color": "#ffffff",
+            "title": "Premium Quality",
+            "content": "<p>Refurbished to manufacturer standards for lasting, reliable performance.</p>"
+          }
+        },
+        "item_3CWtiY": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-coupon",
+            "mobile_icon_width": 24,
+            "icon_width": 32,
+            "icon_background_type": "circle",
+            "icon_background": "#ffb74a",
+            "icon_color": "#ffffff",
+            "title": "Competitive Pricing",
+            "content": "<p>Unbeatable prices on premium electronics for maximum value every purchase.</p>"
+          }
+        },
+        "item_LagGLp": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-secure-profile",
+            "mobile_icon_width": 24,
+            "icon_width": 32,
+            "icon_background_type": "circle",
+            "icon_background": "#ffb74a",
+            "icon_color": "#ffffff",
+            "title": "Warranty Assurance",
+            "content": "<p>Two-year warranty plus round-the-clock support for complete peace of mind.</p>"
+          }
+        },
+        "item_k9VCyb": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-earth",
+            "mobile_icon_width": 24,
+            "icon_width": 32,
+            "icon_background_type": "circle",
+            "icon_background": "#ffb74a",
+            "icon_color": "#ffffff",
+            "title": "Global Trust",
+            "content": "<p>Trusted by thousands worldwide; enjoy free shipping across the UK and beyond.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "item_cyhMUD",
+        "item_3CWtiY",
+        "item_LagGLp",
+        "item_k9VCyb"
+      ],
+      "custom_css": [
+        "h2 {color: #1a1a1a;}"
+      ],
+      "settings": {
+        "full_width": true,
+        "stack_on_mobile": false,
+        "title": "Why Choose Us",
+        "heading_tag": "h4",
+        "text_alignment": "center",
+        "icon_spacing": "medium",
+        "background": "#f7fafd",
+        "background_gradient": "",
+        "text_color": ""
+      }
+    },
+    "rich_text_AxfV3E": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_MHibYY": {
+          "type": "heading",
+          "settings": {
+            "text": "Who We Are",
+            "heading_tag": "h2",
+            "text_color": "#1a1a1a",
+            "gradient": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading_MHibYY"
+      ],
+      "settings": {
+        "full_width": true,
+        "content_width": "small",
+        "text_position": "center",
+        "background": "",
+        "background_gradient": "",
+        "text_color": ""
+      }
+    },
+    "rich_text_PYWzAR": {
+      "type": "rich-text",
+      "blocks": {
+        "image_YmPnih": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/yesagain-banner-intro-2_1.jpg",
+            "width_mode": "full_width",
+            "max_width": 340,
+            "mobile_max_width": 280
+          }
+        },
+        "divider_dwqGx3": {
+          "type": "divider",
+          "settings": {}
+        },
+        "richtext_WhHpmL": {
+          "type": "richtext",
+          "settings": {
+            "content": "<p>At YesAgain, we specialize in professionally renewing MacBooks, laptops, and other IT devices — delivering performance and reliability at a fraction of the original cost. With over 40 years of experience, our certified engineers restore each product to like-new condition, backed by up to a 3-year warranty.</p><p>Operating across the UK, Europe, and the Middle East, we combine global reach with a strong commitment to sustainability. By extending the life of electronics, we help reduce e-waste and make high-quality technology accessible to individuals, businesses, and institutions alike.</p>"
+          }
+        },
+        "button_9k76Qm": {
+          "type": "button",
+          "settings": {
+            "style": "fill",
+            "size": "xl",
+            "text": "More About Us",
+            "url": "shopify://pages/contact",
+            "background": "",
+            "text_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_YmPnih",
+        "divider_dwqGx3",
+        "richtext_WhHpmL",
+        "button_9k76Qm"
+      ],
+      "settings": {
+        "full_width": false,
+        "content_width": "large",
+        "text_position": "start",
+        "background": "#ffffff",
+        "background_gradient": "",
+        "text_color": ""
+      }
+    },
+    "impact_text_ERMxDz": {
+      "type": "impact-text",
+      "blocks": {
+        "item_Q797Da": {
+          "type": "item",
+          "settings": {
+            "title": "45",
+            "subheading": "Years In Business Since 1980",
+            "content": "",
+            "button_text": "",
+            "button_url": "",
+            "animate_impact_text": false,
+            "animate_impact_text_duration": 2
+          }
+        },
+        "item_FrWPyM": {
+          "type": "item",
+          "settings": {
+            "title": "110",
+            "subheading": "Professional Certified Technicians",
+            "content": "",
+            "button_text": "",
+            "button_url": "",
+            "animate_impact_text": false,
+            "animate_impact_text_duration": 2
+          }
+        },
+        "item_k7GJVy": {
+          "type": "item",
+          "settings": {
+            "title": "60 000",
+            "subheading": "Devices Refurbished Last Year",
+            "content": "",
+            "button_text": "",
+            "button_url": "",
+            "animate_impact_text": true,
+            "animate_impact_text_duration": 5
+          }
+        }
+      },
+      "block_order": [
+        "item_Q797Da",
+        "item_FrWPyM",
+        "item_k7GJVy"
+      ],
+      "settings": {
+        "full_width": true,
+        "stack_mobile": true,
+        "text_alignment": "center",
+        "impact_text_style": "fill",
+        "text_divider": "none",
+        "impact_text_size_ratio": 1,
+        "background": "",
+        "background_gradient": "",
+        "heading_text_color": "#1a1a1a",
+        "heading_gradient": "",
+        "text_color": "",
+        "button_background": "",
+        "button_text_color": ""
+      }
+    },
+    "video_JKNNHy": {
+      "type": "video",
+      "blocks": {
+        "play_Dwmhh7": {
+          "type": "play",
+          "settings": {}
+        },
+        "heading_aaFBfM": {
+          "type": "heading",
+          "settings": {
+            "text": "Tour Our Workspace",
+            "heading_tag": "h2"
+          }
+        }
+      },
+      "block_order": [
+        "play_Dwmhh7",
+        "heading_aaFBfM"
+      ],
+      "settings": {
+        "full_width": true,
+        "allow_transparent_header": false,
+        "autoplay": false,
+        "video_size": "auto",
+        "video": "shopify://files/videos/YA UAE Final corporate video (1).mp4",
+        "external_video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+        "text_color": "#ffffff",
+        "overlay_color": "#000000",
+        "overlay_opacity": 30
+      }
+    },
+    "rich_text_m7neyG": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_cbVng8": {
+          "type": "heading",
+          "settings": {
+            "text": "Press Highlights Us",
+            "heading_tag": "h2",
+            "text_color": "#1a1a1a",
+            "gradient": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading_cbVng8"
+      ],
+      "settings": {
+        "full_width": true,
+        "content_width": "small",
+        "text_position": "center",
+        "background": "",
+        "background_gradient": "",
+        "text_color": ""
+      }
+    },
+    "press_48eYM6": {
+      "type": "press",
+      "blocks": {
+        "quote_bHt8rM": {
+          "type": "quote",
+          "settings": {
+            "logo": "shopify://shop_images/mashable_1.png",
+            "logo_width": 200,
+            "author": "",
+            "content": "Your devices don’t always need to be flashy to be functional. If you’re looking for a new computer, whether for work or for play, this Lenovo N21 Chromebook should do the trick — and it’s on sale for a steal.",
+            "show_rating": false,
+            "rating": 4
+          }
+        },
+        "quote_Hhpepx": {
+          "type": "quote",
+          "settings": {
+            "logo": "shopify://shop_images/popularscinceforrebox_1.png",
+            "logo_width": 350,
+            "author": "",
+            "content": "With a 2560 x 1600 Retina display, this MacBook Pro is capable of displaying premium quality content. It also boasts 256 GB  of solid-state drive for your storage needs, 8GB of RAM to run essential apps, and an i5 processor for a seamless performance.",
+            "show_rating": false,
+            "rating": 4
+          }
+        },
+        "quote_KYKa8J": {
+          "type": "quote",
+          "settings": {
+            "logo": "shopify://shop_images/newyorkpostforrebox_2.png",
+            "logo_width": 200,
+            "author": "",
+            "content": "If you’ve been coveting an Apple MacBook Air, but haven’t been able to stomach the price, a refurbished model is a great option. This Apple MacBook Air 13″  Core i5 1.6GHz provides all the light, portable convenience, as well as bells and whistles of the MacBook Air for a fraction of the price.",
+            "show_rating": false,
+            "rating": 4
+          }
+        },
+        "quote_Jp6jTb": {
+          "type": "quote",
+          "settings": {
+            "logo": "shopify://shop_images/thehillforrebox_1.png",
+            "logo_width": 200,
+            "author": "",
+            "content": "This surprisingly affordable option features a 13.3-inch LED back-lit widescreen display, a powerful Intel Core i7 processor,  and a high resolution (2560×1600) retina display that is ideal for enjoying some entertainment or gaming.",
+            "show_rating": false,
+            "rating": 4
+          }
+        },
+        "quote_PE83kW": {
+          "type": "quote",
+          "settings": {
+            "logo": "shopify://shop_images/boingboingforrebox_1.png",
+            "logo_width": 220,
+            "author": "",
+            "content": "Great laptops are hard to come by, especially if you're trying to stay on budget. But instead of sifting through today's latest,  newest models, sometimes you can find the real gems in the classic, well-made models that have proven to stand the test of time. And the best part? They don't have price tags that make your heart palpitate.",
+            "show_rating": false,
+            "rating": 4
+          }
+        },
+        "quote_nWHPUU": {
+          "type": "quote",
+          "settings": {
+            "logo": "shopify://shop_images/audacyforrebox_1.png",
+            "logo_width": 200,
+            "author": "",
+            "content": "This product carries a refurbished rating of “excellent”, meaning it will arrive in a near-mint condition with very minimal to zero  amounts of scuffing on the case. Storage space of 256GB supplies plenty of room for music, photos, videos, and assorted files.",
+            "show_rating": false,
+            "rating": 4
+          }
+        }
+      },
+      "block_order": [
+        "quote_bHt8rM",
+        "quote_Hhpepx",
+        "quote_KYKa8J",
+        "quote_Jp6jTb",
+        "quote_PE83kW",
+        "quote_nWHPUU"
+      ],
+      "settings": {
+        "full_width": true,
+        "content_size": "medium",
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "",
+        "heading_gradient": "",
+        "logo_item_background": "",
+        "logo_item_border": ""
+      }
+    },
+    "testimonials_BJmjTN": {
+      "type": "testimonials",
+      "blocks": {
+        "testimonial_dhNfzM": {
+          "type": "testimonial",
+          "settings": {
+            "round_avatar": true,
+            "show_rating": true,
+            "rating": 5,
+            "author": "",
+            "title": "Martin Shade",
+            "content": "<p>\"Great Product, Purchased the Laptop as a diagnostic tool, great quality and looked like new. Screen quality was fantastic....</p>"
+          }
+        },
+        "testimonial_gpJzg6": {
+          "type": "testimonial",
+          "settings": {
+            "round_avatar": true,
+            "show_rating": true,
+            "rating": 5,
+            "author": "",
+            "title": "Ron Middleton",
+            "content": "<p>\"I've bought a MacBook Air from this company and I very happy with the item it's working great....</p>"
+          }
+        },
+        "testimonial_Ep7NPK": {
+          "type": "testimonial",
+          "settings": {
+            "round_avatar": true,
+            "show_rating": true,
+            "rating": 5,
+            "author": "",
+            "title": "Pam Hollingsbee",
+            "content": "<p>\"Great laptop at a very good price. Looked like new. Very well packed and very quick service. Highly recommend.</p>"
+          }
+        },
+        "testimonial_cTLidK": {
+          "type": "testimonial",
+          "settings": {
+            "round_avatar": true,
+            "show_rating": true,
+            "rating": 5,
+            "author": "",
+            "title": "Louisa Corr",
+            "content": "<p>\"I Bought the HP Elitebook laptop and it is exactly what I hoped for - it is light, perfect condition, speed is great, it's not noisy,...</p>"
+          }
+        },
+        "testimonial_h8ibjJ": {
+          "type": "testimonial",
+          "settings": {
+            "round_avatar": true,
+            "show_rating": true,
+            "rating": 5,
+            "author": "",
+            "title": "James",
+            "content": "<p>\"Really pleased with my MacBook Pro early 2015 Retina model. Condition and battery are exactly as described. Many thanks indeed.</p>"
+          }
+        },
+        "testimonial_hcptpn": {
+          "type": "testimonial",
+          "settings": {
+            "round_avatar": true,
+            "show_rating": true,
+            "rating": 5,
+            "author": "",
+            "title": "Sarah Baldwin",
+            "content": "<p>\"Just what I expected, arrived early, and excellent value.especially with the extended warranty</p>"
+          }
+        },
+        "testimonial_pxFTVf": {
+          "type": "testimonial",
+          "settings": {
+            "round_avatar": true,
+            "show_rating": true,
+            "rating": 5,
+            "author": "",
+            "title": "Robin Groat",
+            "content": "<p>\"Ordered a refurbished Lenovo ThinkPad and delivered in 2 days to the Highlands of Scotland...</p>"
+          }
+        },
+        "testimonial_VPWmmj": {
+          "type": "testimonial",
+          "settings": {
+            "round_avatar": true,
+            "show_rating": true,
+            "rating": 5,
+            "author": "",
+            "title": "mike reeves",
+            "content": "<p>\"Ordered a laptop from this company for my son for home schooling and it is a great bit of kit,..</p>"
+          }
+        }
+      },
+      "block_order": [
+        "testimonial_dhNfzM",
+        "testimonial_gpJzg6",
+        "testimonial_Ep7NPK",
+        "testimonial_cTLidK",
+        "testimonial_h8ibjJ",
+        "testimonial_hcptpn",
+        "testimonial_pxFTVf",
+        "testimonial_VPWmmj"
+      ],
+      "custom_css": [],
+      "settings": {
+        "full_width": true,
+        "stack_testimonials": false,
+        "subheading": "",
+        "title": "Customers Speaks About Us",
+        "content": "",
+        "link_url": "https://www.trustpilot.com/review/www.crs-uk.biz",
+        "link_text": "View Trustpilot profile",
+        "background": "#f7fafd",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "#1a1a1a",
+        "heading_gradient": "",
+        "testimonial_card_background": "#ffffff",
+        "testimonial_card_text_color": ""
+      }
+    },
+    "rich_text_Qn63AL": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_zXT9QW": {
+          "type": "heading",
+          "settings": {
+            "text": "Customers Trust Us",
+            "heading_tag": "h2",
+            "text_color": "#1a1a1a",
+            "gradient": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading_zXT9QW"
+      ],
+      "custom_css": [
+        ".section-full {padding-bottom: 35px;}"
+      ],
+      "settings": {
+        "full_width": true,
+        "content_width": "small",
+        "text_position": "start",
+        "background": "",
+        "background_gradient": "",
+        "text_color": ""
+      }
+    },
+    "17464307923e973d3b": {
+      "type": "apps",
+      "blocks": {
+        "trustview_app_review_widget_CNemqt": {
+          "type": "shopify://apps/trustview/blocks/app_review_widget/bda8b0f7-273b-4b6e-ab43-02c3fec9d11a",
+          "settings": {
+            "widget_design": "design1",
+            "widget_theme": "light",
+            "which_reviews_to_show": "only5",
+            "reviews_per_page": "5",
+            "show_reviews_on_mobile": true,
+            "hide_trust_logo": false
+          }
+        }
+      },
+      "block_order": [
+        "trustview_app_review_widget_CNemqt"
+      ],
+      "custom_css": [
+        ".section-full {padding-bottom: 20px;}"
+      ],
+      "settings": {
+        "full_width": true,
+        "remove_vertical_spacing": false,
+        "remove_horizontal_spacing": false,
+        "background": "",
+        "background_gradient": "",
+        "text_color": ""
+      }
+    },
+    "p_faq_zUjcNK": {
+      "type": "p-faq",
+      "blocks": {
+        "category_icon_GEQiJK": {
+          "type": "category_icon",
+          "settings": {
+            "title": "About Company",
+            "icon": "clipboard",
+            "svg": ""
+          }
+        },
+        "category_icon_CeWEzB": {
+          "type": "category_icon",
+          "settings": {
+            "title": "Quality Standards",
+            "icon": "tick",
+            "svg": ""
+          }
+        },
+        "category_icon_QwxUP9": {
+          "type": "category_icon",
+          "settings": {
+            "title": "Shipping & Payment",
+            "icon": "box",
+            "svg": ""
+          }
+        },
+        "question_ydawPA": {
+          "type": "question",
+          "settings": {
+            "question": "Is the item durable?",
+            "answer": "<p>Yes<br/><br/></p>",
+            "title": "About Company",
+            "icon": "none",
+            "custom_icon": "",
+            "open_answer_by_default": false
+          }
+        },
+        "question_E3YUxx": {
+          "type": "question",
+          "settings": {
+            "question": "What is the type of the battery comes with it ? and does it have USB 3.0 ports ?",
+            "answer": "<p>3 ports 3.0 USB, the battery was acceptable with autonomy between 1:30 to 2 hours.</p>",
+            "title": "About Company",
+            "icon": "none",
+            "custom_icon": "",
+            "open_answer_by_default": false
+          }
+        },
+        "question_Q7CXPm": {
+          "type": "question",
+          "settings": {
+            "question": "Does it have WiFi inbuilt to connect to internet?",
+            "answer": "<p>Yes does connect to wi-fi with inbuilt connection<br/><br/></p>",
+            "title": "About Company",
+            "icon": "none",
+            "custom_icon": "",
+            "open_answer_by_default": false
+          }
+        },
+        "question_wECfdM": {
+          "type": "question",
+          "settings": {
+            "question": "Is the keyboard in this laptop backlit? Also does it have the fingerprint recognition functionality?",
+            "answer": "<p>Non-backlit and no fingerprint reader.<br/><br/></p>",
+            "title": "About Company",
+            "icon": "none",
+            "custom_icon": "",
+            "open_answer_by_default": false
+          }
+        },
+        "question_bCBPgH": {
+          "type": "question",
+          "settings": {
+            "question": "Does it have WiFi inbuilt to connect to internet?",
+            "answer": "<p>Yes does connect to wi-fi with inbuilt connection<br/><br/></p>",
+            "title": "Quality Standards",
+            "icon": "none",
+            "custom_icon": "",
+            "open_answer_by_default": false
+          }
+        },
+        "question_CU8yA9": {
+          "type": "question",
+          "settings": {
+            "question": "Is the keyboard in this laptop backlit? Also does it have the fingerprint recognition functionality?",
+            "answer": "<p>Non-backlit and no fingerprint reader.</p>",
+            "title": "Quality Standards",
+            "icon": "none",
+            "custom_icon": "",
+            "open_answer_by_default": false
+          }
+        },
+        "question_EitaVp": {
+          "type": "question",
+          "settings": {
+            "question": "Can you put cd or dvd in it?",
+            "answer": "<p>No it does not have the facility for cd/dvd you would require an external drive to accommodate.</p>",
+            "title": "Quality Standards",
+            "icon": "none",
+            "custom_icon": "",
+            "open_answer_by_default": false
+          }
+        },
+        "question_rGrn3w": {
+          "type": "question",
+          "settings": {
+            "question": "Does this laptop come with office?",
+            "answer": "<p>No, Just mac OS.<br/><br/></p>",
+            "title": "Quality Standards",
+            "icon": "none",
+            "custom_icon": "",
+            "open_answer_by_default": false
+          }
+        },
+        "question_aKkAP3": {
+          "type": "question",
+          "settings": {
+            "question": "What is the type of the battery comes with it ? and does it have USB 3.0 ports?",
+            "answer": "<p>3 ports 3.0 USB, the battery was acceptable with autonomy between 1:30 to 2 hours</p>",
+            "title": "Quality Standards",
+            "icon": "none",
+            "custom_icon": "",
+            "open_answer_by_default": false
+          }
+        },
+        "question_k4yMgL": {
+          "type": "question",
+          "settings": {
+            "question": "Can I add memory to this product?",
+            "answer": "<p>Yes, it has two slots of memory bank and the total memory can be expanded up to 32G.<br/><br/></p>",
+            "title": "Quality Standards",
+            "icon": "none",
+            "custom_icon": "",
+            "open_answer_by_default": false
+          }
+        },
+        "question_Pwhbzj": {
+          "type": "question",
+          "settings": {
+            "question": "Does this laptop come with an IPS screen?",
+            "answer": "<p>No, standard display.</p>",
+            "title": "Quality Standards",
+            "icon": "none",
+            "custom_icon": "",
+            "open_answer_by_default": false
+          }
+        },
+        "question_wH7dTW": {
+          "type": "question",
+          "settings": {
+            "question": "How long does delivery take?",
+            "answer": "<p>Standard UK delivery takes 2–4 working days; international shipping times vary by destination and will be calculated and displayed at checkout. </p>",
+            "title": "Shipping & Payment",
+            "icon": "none",
+            "custom_icon": "",
+            "open_answer_by_default": false
+          }
+        },
+        "question_LyaJeY": {
+          "type": "question",
+          "settings": {
+            "question": "Do you offer free shipping?",
+            "answer": "<p>Yes—free standard shipping is available on all orders within the UK. International shipping rates apply and are shown at checkout.</p>",
+            "title": "Shipping & Payment",
+            "icon": "none",
+            "custom_icon": "",
+            "open_answer_by_default": false
+          }
+        },
+        "question_izBeTX": {
+          "type": "question",
+          "settings": {
+            "question": "What payment methods do you accept?",
+            "answer": "<p>We accept all major debit and credit cards (Visa, Mastercard, American Express) as well as PayPal; all payments are processed securely via industry-leading gateways. </p>",
+            "title": "Shipping & Payment",
+            "icon": "none",
+            "custom_icon": "",
+            "open_answer_by_default": false
+          }
+        }
+      },
+      "block_order": [
+        "category_icon_GEQiJK",
+        "category_icon_CeWEzB",
+        "category_icon_QwxUP9",
+        "question_ydawPA",
+        "question_E3YUxx",
+        "question_Q7CXPm",
+        "question_wECfdM",
+        "question_bCBPgH",
+        "question_CU8yA9",
+        "question_EitaVp",
+        "question_rGrn3w",
+        "question_aKkAP3",
+        "question_k4yMgL",
+        "question_Pwhbzj",
+        "question_wH7dTW",
+        "question_LyaJeY",
+        "question_izBeTX"
+      ],
+      "custom_css": [
+        ".section-header__title {font-size: var(--text-h2);}",
+        ".desc a {text-decoration: underline;}",
+        ".esp-faq-section {padding-left: 0px !important; padding-right: 0px !important;}",
+        "@media (min-width: 1700px) {.esp-faq-section {padding-left: 0; padding-right: 0; }}"
+      ],
+      "settings": {
+        "title": "FAQ",
+        "desc": "<p>If you can’t find the answer you’re looking for here, please visit our <a href=\"/pages/contact\" title=\"Contact\">Contact page</a> and send us a message. Our friendly support team is always ready to help with any additional questions or concerns.</p>",
+        "show_search_box": true,
+        "desc_font_size": 20,
+        "category_font_size": 20,
+        "question_font_size": 18,
+        "answer_font_size": 18,
+        "background_color": "#ffffff",
+        "title_color": "#1a1a1a",
+        "desc_color": "#041525",
+        "border_color": "#e8e8e8",
+        "border_radius": 8,
+        "question_text_color": "#041525",
+        "question_bg_color": "#f7fafd",
+        "question_text_hover_color": "#041525",
+        "question_bg_hover_color": "#ffffff",
+        "category_item_text_color": "#041525",
+        "category_item_bg_color": "#f7fafd",
+        "category_item_active_text_color": "#ffffff",
+        "category_item_bg_hover_color": "#fbb03b",
+        "category_item_text_active_color": "#ffffff",
+        "category_item_bg_active_color": "#fbb03b",
+        "dynamic_search_text_color": "#041525",
+        "dynamic_search_bg_color": "#ffffff",
+        "dynamic_search_active_text_color": "#041525",
+        "dynamic_search_active_bg_color": "#ffffff",
+        "section_width": 1600,
+        "padding_top": 25,
+        "padding_bottom": 20,
+        "margin_top": 20,
+        "margin_bottom": 0
+      }
+    },
+    "blog_posts_UwtNFK": {
+      "type": "blog-posts",
+      "blocks": {
+        "blog_rnxCmC": {
+          "type": "blog",
+          "settings": {
+            "blog": "infos",
+            "posts_count": 3,
+            "stack_items": false
+          }
+        }
+      },
+      "block_order": [
+        "blog_rnxCmC"
+      ],
+      "settings": {
+        "full_width": true,
+        "show_excerpt": true,
+        "show_date": false,
+        "show_author": false,
+        "show_comments_count": false,
+        "show_category": true,
+        "subheading": "",
+        "title": "Blog posts",
+        "content": "",
+        "link_url": "shopify://blogs/infos",
+        "link_text": "View all",
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "#1a1a1a",
+        "heading_gradient": ""
+      }
+    }
+  },
+  "order": [
+    "slideshow",
+    "text_with_icons_TLWd96",
+    "featured_collection_r3WDTz",
+    "collection_list_bkMbAD",
+    "rich_text_7UWq7y",
+    "media_grid_WFyUpV",
+    "rich_text_GcTDFc",
+    "media_grid_iUb3B4",
+    "rich_text_rQTGK7",
+    "media_grid_iWT4bB",
+    "rich_text_iFjGxb",
+    "media_grid_ybJ4FM",
+    "images_with_text_scrolling_4EVxtQ",
+    "text_with_icons_8VYnMg",
+    "rich_text_AxfV3E",
+    "rich_text_PYWzAR",
+    "impact_text_ERMxDz",
+    "video_JKNNHy",
+    "rich_text_m7neyG",
+    "press_48eYM6",
+    "testimonials_BJmjTN",
+    "rich_text_Qn63AL",
+    "17464307923e973d3b",
+    "p_faq_zUjcNK",
+    "blog_posts_UwtNFK"
+  ]
+}

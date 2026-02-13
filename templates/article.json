@@ -1,0 +1,92 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "breadcrumbs_pNcrT6": {
+      "type": "breadcrumbs",
+      "blocks": {
+        "breadcrumb_item_ftmfhr": {
+          "type": "breadcrumb_item",
+          "settings": {
+            "item_title": "Home",
+            "item_link": "/"
+          }
+        },
+        "breadcrumb_item_b6LH3W": {
+          "type": "breadcrumb_item",
+          "settings": {
+            "item_title": "Blog",
+            "item_link": "shopify://blogs/infos"
+          }
+        },
+        "breadcrumb_item_zwLbzz": {
+          "type": "breadcrumb_item",
+          "settings": {
+            "item_title": "{{ article.title }}",
+            "item_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "breadcrumb_item_ftmfhr",
+        "breadcrumb_item_b6LH3W",
+        "breadcrumb_item_zwLbzz"
+      ],
+      "name": "Configurable Breadcrumbs",
+      "settings": {
+        "separator_icon": "/",
+        "text_color": "#041525",
+        "font_size": 16,
+        "padding_top": 30,
+        "padding_bottom": 30
+      }
+    },
+    "main": {
+      "type": "main-article",
+      "blocks": {
+        "navigation": {
+          "type": "navigation",
+          "settings": {}
+        },
+        "comments": {
+          "type": "comments",
+          "settings": {
+            "show_gravatar": true,
+            "comments_per_page": 5
+          }
+        }
+      },
+      "block_order": [
+        "navigation",
+        "comments"
+      ],
+      "custom_css": [
+        ".article-banner {background-color: rgb(247 250 253);}"
+      ],
+      "settings": {
+        "allow_transparent_header": false,
+        "layout": "image_left_text_right",
+        "show_author": true,
+        "show_date": true,
+        "show_comments_count": true,
+        "show_share_buttons": true,
+        "banner_background": "#f7fafd",
+        "banner_text_color": "",
+        "overlay_color": "#000000",
+        "overlay_opacity": 0,
+        "content_width": "750px"
+      }
+    }
+  },
+  "order": [
+    "breadcrumbs_pNcrT6",
+    "main"
+  ]
+}

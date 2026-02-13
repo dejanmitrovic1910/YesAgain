@@ -1,0 +1,1079 @@
+{%- assign st = section.settings -%}
+{%- assign categories = '' -%}
+{%- for block in section.blocks -%}
+  {%- if block.type == 'question' -%}
+    {%- assign bs = block.settings -%}
+    {%- assign blockCategory = bs.title | strip | append: ', ' -%}
+    {%- unless categories contains blockCategory -%}
+      {%- assign categories = categories | append: blockCategory -%}
+    {%- endunless -%}
+  {%- endif -%}
+{%- endfor -%}
+{%- assign categories = categories | split: ', ' -%}
+
+
+<div class="esp-faq-section section"
+     aria-label="{{ section.settings.title }}">
+
+  {%- if st.title != blank -%}
+    <h2 class="section-header__title">{{ st.title }}</h2>
+  {%- endif -%}
+  
+  {%- if st.desc != blank -%}
+    <div class="desc">{{ st.desc | replace: '<a', '<a class="text-link"' }}</div>
+  {%- endif -%}
+  
+  {% if section.settings.show_search_box %}
+    <div class="search-box">
+      <div class="inner">
+        <input type="text" 
+               id="myInputSearch" 
+               placeholder="{{ section.settings.search_placeholder | default: 'Search...' }}"
+               aria-label="Search FAQ"
+               style="border-radius: {{ section.settings.border_radius }}px;">
+        <button id="faq-clear-search" aria-label="Clear search">
+          <span class="close">&#10006;</span>
+        </button>
+      </div>
+    </div>
+  {% endif %}
+
+  <div id="notfound">{{ section.settings.no_results_text | default: 'No matching questions found.' }}</div>
+  
+  {%- if categories.size > 0 -%}
+    <div class="sidebar">
+      <div class="categories">
+        {% for category in categories %}
+            <div class="category-item" 
+                 data-category="{{ category | handleize }}">
+              {%- assign icon = '' -%}
+              {%- for block in section.blocks -%}
+                {%- if block.type == 'category_icon' -%}
+                  {%- if block.settings.title == category -%}
+                    {%- if block.settings.svg != blank -%}
+                      {%- assign icon = block.settings.svg -%}
+                    {%- else -%}
+                      {%- capture icon -%}
+                        {%- render 'p-faq-icons', icon: block.settings.icon -%}
+                      {%- endcapture -%}
+                    {%- endif -%}
+                  {%- endif -%}
+                {%- endif -%}
+              {%- endfor -%}
+              {%- if icon != blank -%}
+                <span class="category-icon">{{ icon }}</span>
+              {%- endif -%}
+              <span class="category-name">{{ category }}</span>
+            </div>
+        {% endfor %}
+      </div>
+    </div>
+  {%- endif -%}
+  
+  <div class="content-side">
+    <div class="faq-content">
+      {% for block in section.blocks %}
+        {% if block.type == 'question' %}
+          
+          <div class="faq-elem 
+                      {% if block.settings.open_answer_by_default %}active{% endif %}" 
+               data-category="{{ block.settings.title | handleize }}"
+               style="display: {% if forloop.first %}block{% elsif categories != blank %}none{% endif %};">
+            <div class="question" 
+                 role="button"
+                 tabindex="0">
+              <span class="text-content">
+          
+                {%- if block.settings.custom_icon != blank -%}
+                  <span class="faq-icon">{{ block.settings.custom_icon }}</span>
+                {%- else -%}
+                  <span class="faq-icon">{%- render 'p-faq-icons', icon: block.settings.icon -%}</span>
+                {%- endif -%}
+          
+                <span class="text">{{ block.settings.question }}</span>
+                
+              </span>
+              <span class="arrow">╲╱</span>
+            </div>
+            <div class="answer">{{ block.settings.answer }}</div>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+  
+</div>
+
+
+<style>
+
+  #shopify-section-{{ section.id }} {
+    margin-top: {{ section.settings.margin_top }}px;
+    margin-bottom: {{ section.settings.margin_bottom }}px;
+    background-color: {{ section.settings.background_color }};
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+  }
+
+  #shopify-section-{{ section.id }} .esp-faq-section {
+    width: 100%;
+    max-width: {{ section.settings.section_width }}px;
+  }
+
+  #shopify-section-{{ section.id }} .section-header__title {
+    color: {{ st.title_color }}; 
+  }
+  #shopify-section-{{ section.id }} .desc {
+    color: {{ st.desc_color }}; 
+    font-size: {{ st.desc_font_size }}px;
+  }
+  
+  #shopify-section-{{ section.id }} .faq-elem {
+    border-radius: {{ section.settings.border_radius }}px;
+    border: 1px solid {{ section.settings.border_color }};
+    background-color: {{ section.settings.question_bg_color }};
+    color: {{ section.settings.question_text_color }};
+    fill: {{ section.settings.question_text_color }};
+    stroke: {{ section.settings.question_text_color }};
+  }
+  @media (hover: hover) {
+    #shopify-section-{{ section.id }} .faq-elem:hover {
+      background-color: {{ section.settings.question_bg_hover_color }};
+      color: {{ section.settings.question_text_hover_color }};
+      fill: {{ section.settings.question_text_hover_color }};
+      stroke: {{ section.settings.question_text_hover_color }};
+    }
+  }
+  #shopify-section-{{ section.id }} .faq-elem.active {
+    background-color: {{ section.settings.question_bg_hover_color }};
+    color: {{ section.settings.question_text_hover_color }};
+    fill: {{ section.settings.question_text_hover_color }};
+    stroke: {{ section.settings.question_text_hover_color }};
+  }
+  #shopify-section-{{ section.id }} .faq-elem .question {
+    font-size: {{ st.question_font_size }}px;
+  }
+  #shopify-section-{{ section.id }} .esp-faq-section .question .faq-icon {
+    display: block;
+    height: auto;
+  }
+  #shopify-section-{{ section.id }} .esp-faq-section .question .faq-icon svg {
+    width: {{ section.settings.question_font_size | plus: 1 }}px;
+    margin-inline-end: {{ section.settings.question_font_size | divided_by: 2 }}px;
+  }
+  #shopify-section-{{ section.id }} .faq-elem .answer {
+    font-size: {{ st.answer_font_size }}px;
+  }
+  #shopify-section-{{ section.id }} .faq-elem .answer * {
+    font-size: {{ st.answer_font_size }}px;
+  }
+  
+  #shopify-section-{{ section.id }} .esp-faq-section .search-box input {
+    border: 1px solid {{ section.settings.border_color }};
+    color: {{ section.settings.dynamic_search_text_color }};
+    background-color: {{ section.settings.dynamic_search_bg_color }};
+    font-size: {{ st.question_font_size }}px;
+  }
+  #shopify-section-{{ section.id }} .esp-faq-section .search-box input::placeholder {
+    color: {{ section.settings.dynamic_search_text_color }};
+  }
+  #shopify-section-{{ section.id }} .esp-faq-section .search-box input:focus {
+    color: {{ section.settings.dynamic_search_active_text_color }};
+    background-color: {{ section.settings.dynamic_search_active_bg_color }};
+  }
+  #shopify-section-{{ section.id }} .esp-faq-section .search-box input::placeholder {
+    color: {{ section.settings.dynamic_search_text_color }};
+  }
+  
+  #shopify-section-{{ section.id }} .esp-faq-section .sidebar .category-item {
+    background-color: {{ section.settings.category_item_bg_color }};
+    color: {{ section.settings.category_item_text_color }};
+    fill: {{ section.settings.category_item_text_color }};
+    stroke: {{ section.settings.category_item_text_color }};
+    border: 1px solid {{ section.settings.border_color }};
+    border-radius: {{ section.settings.border_radius }}px;
+  }
+  #shopify-section-{{ section.id }} .esp-faq-section .sidebar .category-item:hover {
+    background-color: {{ section.settings.category_item_bg_hover_color }};
+    fill: {{ section.settings.category_item_active_text_color }};
+    stroke: {{ section.settings.category_item_active_text_color }};
+    color: {{ section.settings.category_item_active_text_color }};
+  }
+  #shopify-section-{{ section.id }} .esp-faq-section .sidebar .category-item.active {
+    background-color: {{ section.settings.category_item_bg_active_color }};
+    color: {{ section.settings.category_item_text_active_color }};
+    fill: {{ section.settings.category_item_text_active_color }};
+    stroke: {{ section.settings.category_item_text_active_color }};
+    transform: none;
+    cursor: default;
+  }
+  #shopify-section-{{ section.id }} .esp-faq-section .sidebar .category-item .category-icon {
+    display: block;
+    width: {{ section.settings.category_font_size }}px;
+    height: auto;
+    margin-inline-end: {{ section.settings.category_font_size | divided_by: 2 }}px;
+  }
+  #shopify-section-{{ section.id }} .esp-faq-section .sidebar .category-item .category-name {
+    font-size: {{ section.settings.category_font_size }}px;
+  }
+  #shopify-section-{{ section.id }} .hide {
+    display: none !important;
+  }
+  
+</style>
+
+
+<script>
+  
+  (function() {
+    
+    let resources = [];
+    
+    if(!window.ecom_store_pro__faq_custom_section) {
+      window.ecom_store_pro__faq_custom_section = true;
+      resources = [
+        { path: '{{ 'p-faq-section.js' | asset_url }}', type: 'script' },
+        { path: '{{ 'p-faq-section.css' | asset_url }}', type: 'style' }
+      ];
+    }
+    
+    function loadResource({ path, type }) {
+      return new Promise((resolve, reject) => {
+        const element = document.createElement(type === 'script' ? 'script' : 'link');
+        
+        if (type === 'script') {
+          element.type = 'text/javascript';
+          element.async = false;
+          element.defer = true;
+          element.src = path;
+        } else {
+          element.rel = 'stylesheet';
+          element.href = path;
+        }
+        
+        element.onload = () => resolve();
+        element.onerror = () => reject(`Failed to load ${path}`);
+
+        document.body.appendChild(element);
+      });
+    }
+    
+    Promise.all(resources.map(loadResource))
+      .then(() => {
+        let custom_section = document.querySelector('#shopify-section-{{ section.id }} .esp-faq-section');
+        let waitForJSLoading = setInterval(function() {
+          if(typeof espCustomSectionFAQ != undefined && typeof espCustomSectionFAQ != 'undefined') {
+            clearInterval(waitForJSLoading); 
+            espCustomSectionFAQ(custom_section);
+          }
+        }, 500);
+      })
+      .catch(error => console.error('Error loading resources:', error));
+    
+  })();
+  
+</script>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {%- assign step = 0 -%}
+    {%- for block in section.blocks -%}
+      {%- assign question = block.settings.question | replace: '"', "'" -%}
+      {%- assign answer = block.settings.answer | replace: '"', "'" -%}
+      {%- if question != blank and answer != blank -%}
+        {%- assign step = step | plus: 1 -%}
+        {%- unless step == 1 -%},{%- endunless -%}
+        {
+          "@type": "Question",
+          "name": "{{ question }}",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "{{ answer }}",
+            "@id": "https://{{ request.host }}#article-answer-{{ forloop.index }}"
+          },
+          "@id": "https://{{ request.host }}#article-question-{{ forloop.index }}",
+          "url": "https://{{ request.host }}{{ page.url }}#question-{{ forloop.index }}",
+          "datePublished": "{{ 'now' | date: '%Y-%m-%d' }}",
+          "author": {
+            "@type": "Organization",
+            "name": "{{ shop.name }}"
+          }
+        }
+      {%- endif -%}
+    {%- endfor -%}
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "{{ shop.name }}",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "{{ settings.share_image | img_url: 'master' }}"
+    }
+  }
+}
+</script>
+
+
+{% schema %}
+{
+  "name": "FAQ Section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "General Settings"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Section Title",
+      "default": "FAQ"
+    },
+    {
+      "type": "richtext",
+      "id": "desc",
+      "label": "Section Description"
+    },
+    {
+      "type": "header",
+      "content": "Functionality"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_search_box",
+      "label": "Show Search Box",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Typography"
+    },
+    {
+      "type": "range",
+      "id": "desc_font_size",
+      "label": "Description Font Size",
+      "min": 12,
+      "max": 36,
+      "step": 1,
+      "default": 20,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "category_font_size",
+      "label": "Category Font Size",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "default": 18,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "question_font_size",
+      "label": "Question Font Size",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "default": 16,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "answer_font_size",
+      "label": "Answer Font Size",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "default": 14,
+      "unit": "px"
+    },
+    {
+      "type": "header",
+      "content": "Colors & Styling"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color",
+      "default": "#f9f9f9"
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Title Color",
+      "default": "#1a1a1a"
+    },
+    {
+      "type": "color",
+      "id": "desc_color",
+      "label": "Description Color",
+      "default": "#2c2c2c"
+    },
+    {
+      "type": "color",
+      "id": "border_color",
+      "label": "Border Color",
+      "default": "#e8e8e8"
+    },
+    {
+      "type": "range",
+      "id": "border_radius",
+      "label": "Border Radius",
+      "default": 0,
+      "min": 0,
+      "max": 25,
+      "step": 1,
+      "unit": "px"
+    },
+    {
+      "type": "paragraph",
+      "content": "FAQ points"
+    },
+    {
+      "type": "color",
+      "id": "question_text_color",
+      "label": "FAQ point Text Color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "question_bg_color",
+      "label": "FAQ point Background Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "question_text_hover_color",
+      "label": "FAQ point Text Hover Color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "question_bg_hover_color",
+      "label": "FAQ point Background Hover Color",
+      "default": "#f5f5f5"
+    },
+    {
+      "type": "paragraph",
+      "content": "Categories"
+    },
+    {
+      "type": "color",
+      "id": "category_item_text_color",
+      "label": "Category Text Color",
+      "default": "#2c2c2c"
+    },
+    {
+      "type": "color",
+      "id": "category_item_bg_color",
+      "label": "Category Background Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "category_item_active_text_color",
+      "label": "Category Hover Text Color",
+      "default": "#2c2c2c"
+    },
+    {
+      "type": "color",
+      "id": "category_item_bg_hover_color",
+      "label": "Category Hover Background Color",
+      "default": "#f5f5f5"
+    },
+    {
+      "type": "color",
+      "id": "category_item_text_active_color",
+      "label": "Category Active Text Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "category_item_bg_active_color",
+      "label": "Category Active Background Color",
+      "default": "#2f4a7e"
+    },
+    {
+      "type": "paragraph",
+      "content": "Dynamic search"
+    },
+    {
+      "type": "color",
+      "id": "dynamic_search_text_color",
+      "label": "Dynamic search Text Color",
+      "default": "#000"
+    },
+    {
+      "type": "color",
+      "id": "dynamic_search_bg_color",
+      "label": "Dynamic search Background Color",
+      "default": "#fff"
+    },
+    {
+      "type": "color",
+      "id": "dynamic_search_active_text_color",
+      "label": "Dynamic search Active Text Color",
+      "default": "#000"
+    },
+    {
+      "type": "color",
+      "id": "dynamic_search_active_bg_color",
+      "label": "Dynamic search Active Background Color",
+      "default": "#fff"
+    },
+    {
+      "type": "header",
+      "content": "Width & Spacing"
+    },
+    {
+      "type": "range",
+      "id": "section_width",
+      "label": "Section width",
+      "min": 500,
+      "max": 2200,
+      "step": 20,
+      "default": 1200,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Section Top Padding",
+      "min": 0,
+      "max": 180,
+      "step": 5,
+      "default": 40,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Section Bottom Padding",
+      "min": 0,
+      "max": 180,
+      "step": 5,
+      "default": 40,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "margin_top",
+      "label": "Section Top Margin",
+      "min": 0,
+      "max": 180,
+      "step": 5,
+      "default": 40,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "margin_bottom",
+      "label": "Section Bottom Margin",
+      "min": 0,
+      "max": 180,
+      "step": 5,
+      "default": 40,
+      "unit": "px"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "question",
+      "name": "FAQ Item",
+      "settings": [
+        {
+          "type": "textarea",
+          "id": "question",
+          "label": "Question"
+        },
+        {
+          "type": "richtext",
+          "id": "answer",
+          "label": "Answer"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Category"
+        },
+        {
+          "type": "select",
+          "id": "icon",
+          "options": [
+            {
+              "value": "none",
+              "label": "None"
+            },
+            {
+              "value": "apple",
+              "label": "Apple"
+            },
+            {
+              "value": "arrow",
+              "label": "Arrow"
+            },
+            {
+              "value": "banana",
+              "label": "Banana"
+            },
+            {
+              "value": "bottle",
+              "label": "Bottle"
+            },
+            {
+              "value": "box",
+              "label": "Box"
+            },
+            {
+              "value": "breaked_box",
+              "label": "Breaked box"
+            },
+            {
+              "value": "caret",
+              "label": "Caret"
+            },
+            {
+              "value": "carrot",
+              "label": "Carrot"
+            },
+            {
+              "value": "cash",
+              "label": "Cash"
+            },
+            {
+              "value": "chat_bubble",
+              "label": "Chat bubble"
+            },
+            {
+              "value": "check_mark",
+              "label": "Check mark"
+            },
+            {
+              "value": "clipboard",
+              "label": "Clipboard"
+            },
+            {
+              "value": "credit_card",
+              "label": "Credit card"
+            },
+            {
+              "value": "dairy",
+              "label": "Dairy"
+            },
+            {
+              "value": "dairy_free",
+              "label": "Dairy free"
+            },
+            {
+              "value": "discount",
+              "label": "Discount"
+            },
+            {
+              "value": "dryer",
+              "label": "Dryer"
+            },
+            {
+              "value": "eye",
+              "label": "Eye"
+            },
+            {
+              "value": "fire",
+              "label": "Fire"
+            },
+            {
+              "value": "gluten_free",
+              "label": "Gluten free"
+            },
+            {
+              "value": "heart",
+              "label": "Heart"
+            },
+            {
+              "value": "iron",
+              "label": "Iron"
+            },
+            {
+              "value": "info",
+              "label": "Info"
+            },
+            {
+              "value": "leaf",
+              "label": "Leaf"
+            },
+            {
+              "value": "leather",
+              "label": "Leather"
+            },
+            {
+              "value": "lightning_bolt",
+              "label": "Lightning bolt"
+            },
+            {
+              "value": "lipstick",
+              "label": "Lipstick"
+            },
+            {
+              "value": "lock",
+              "label": "Lock"
+            },
+            {
+              "value": "map_pin",
+              "label": "Map pin"
+            },
+            {
+              "value": "nut_free",
+              "label": "Nut free"
+            },
+            {
+              "value": "padlock",
+              "label": "Padlock"
+            },
+            {
+              "value": "pants",
+              "label": "Pants"
+            },
+            {
+              "value": "paw_print",
+              "label": "Paw print"
+            },
+            {
+              "value": "pepper",
+              "label": "Pepper"
+            },
+            {
+              "value": "perfume",
+              "label": "Perfume"
+            },
+            {
+              "value": "plane",
+              "label": "Plane"
+            },
+            {
+              "value": "plant",
+              "label": "Plant"
+            },
+            {
+              "value": "price_tag",
+              "label": "Price tag"
+            },
+            {
+              "value": "question_mark",
+              "label": "Question mark"
+            },
+            {
+              "value": "recycle",
+              "label": "Recycle"
+            },
+            {
+              "value": "return",
+              "label": "Return"
+            },
+            {
+              "value": "ruler",
+              "label": "Ruler"
+            },
+            {
+              "value": "serving_dish",
+              "label": "Serving dish"
+            },
+            {
+              "value": "shirt",
+              "label": "Shirt"
+            },
+            {
+              "value": "shoe",
+              "label": "Shoe"
+            },
+            {
+              "value": "silhouette",
+              "label": "Silhouette"
+            },
+            {
+              "value": "snowflake",
+              "label": "Snowflake"
+            },
+            {
+              "value": "star",
+              "label": "Star"
+            },
+            {
+              "value": "stopwatch",
+              "label": "Stopwatch"
+            },
+            {
+              "value": "tick",
+              "label": "Tick"
+            },
+            {
+              "value": "truck",
+              "label": "Truck"
+            },
+            {
+              "value": "washing",
+              "label": "Washing"
+            }
+          ],
+          "default": "none",
+          "label": "Icon"
+        },
+        {
+          "type": "html",
+          "id": "custom_icon",
+          "label": "Custom SVG Icon"
+        },
+        {
+          "type": "checkbox",
+          "id": "open_answer_by_default",
+          "label": "Open Answer by Default",
+          "default": false
+        }
+      ]
+    },
+    {
+      "type": "category_icon",
+      "name": "Category icon",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Category Name"
+        },
+        {
+          "type": "select",
+          "id": "icon",
+          "options": [
+            {
+              "value": "none",
+              "label": "None"
+            },
+            {
+              "value": "apple",
+              "label": "Apple"
+            },
+            {
+              "value": "arrow",
+              "label": "Arrow"
+            },
+            {
+              "value": "banana",
+              "label": "Banana"
+            },
+            {
+              "value": "bottle",
+              "label": "Bottle"
+            },
+            {
+              "value": "box",
+              "label": "Box"
+            },
+            {
+              "value": "breaked_box",
+              "label": "Breaked box"
+            },
+            {
+              "value": "caret",
+              "label": "Caret"
+            },
+            {
+              "value": "carrot",
+              "label": "Carrot"
+            },
+            {
+              "value": "cash",
+              "label": "Cash"
+            },
+            {
+              "value": "chat_bubble",
+              "label": "Chat bubble"
+            },
+            {
+              "value": "check_mark",
+              "label": "Check mark"
+            },
+            {
+              "value": "clipboard",
+              "label": "Clipboard"
+            },
+            {
+              "value": "credit_card",
+              "label": "Credit card"
+            },
+            {
+              "value": "dairy",
+              "label": "Dairy"
+            },
+            {
+              "value": "dairy_free",
+              "label": "Dairy free"
+            },
+            {
+              "value": "discount",
+              "label": "Discount"
+            },
+            {
+              "value": "dryer",
+              "label": "Dryer"
+            },
+            {
+              "value": "eye",
+              "label": "Eye"
+            },
+            {
+              "value": "fire",
+              "label": "Fire"
+            },
+            {
+              "value": "gluten_free",
+              "label": "Gluten free"
+            },
+            {
+              "value": "heart",
+              "label": "Heart"
+            },
+            {
+              "value": "iron",
+              "label": "Iron"
+            },
+            {
+              "value": "info",
+              "label": "Info"
+            },
+            {
+              "value": "leaf",
+              "label": "Leaf"
+            },
+            {
+              "value": "leather",
+              "label": "Leather"
+            },
+            {
+              "value": "lightning_bolt",
+              "label": "Lightning bolt"
+            },
+            {
+              "value": "lipstick",
+              "label": "Lipstick"
+            },
+            {
+              "value": "lock",
+              "label": "Lock"
+            },
+            {
+              "value": "map_pin",
+              "label": "Map pin"
+            },
+            {
+              "value": "nut_free",
+              "label": "Nut free"
+            },
+            {
+              "value": "padlock",
+              "label": "Padlock"
+            },
+            {
+              "value": "pants",
+              "label": "Pants"
+            },
+            {
+              "value": "paw_print",
+              "label": "Paw print"
+            },
+            {
+              "value": "pepper",
+              "label": "Pepper"
+            },
+            {
+              "value": "perfume",
+              "label": "Perfume"
+            },
+            {
+              "value": "plane",
+              "label": "Plane"
+            },
+            {
+              "value": "plant",
+              "label": "Plant"
+            },
+            {
+              "value": "price_tag",
+              "label": "Price tag"
+            },
+            {
+              "value": "question_mark",
+              "label": "Question mark"
+            },
+            {
+              "value": "recycle",
+              "label": "Recycle"
+            },
+            {
+              "value": "return",
+              "label": "Return"
+            },
+            {
+              "value": "ruler",
+              "label": "Ruler"
+            },
+            {
+              "value": "serving_dish",
+              "label": "Serving dish"
+            },
+            {
+              "value": "shirt",
+              "label": "Shirt"
+            },
+            {
+              "value": "shoe",
+              "label": "Shoe"
+            },
+            {
+              "value": "silhouette",
+              "label": "Silhouette"
+            },
+            {
+              "value": "snowflake",
+              "label": "Snowflake"
+            },
+            {
+              "value": "star",
+              "label": "Star"
+            },
+            {
+              "value": "stopwatch",
+              "label": "Stopwatch"
+            },
+            {
+              "value": "tick",
+              "label": "Tick"
+            },
+            {
+              "value": "truck",
+              "label": "Truck"
+            },
+            {
+              "value": "washing",
+              "label": "Washing"
+            }
+          ],
+          "default": "none",
+          "label": "Icon"
+        },
+        {
+          "type": "html",
+          "id": "svg",
+          "label": "Category Icon SVG code"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "FAQ with Categories"
+    }
+  ]
+}
+{% endschema %}

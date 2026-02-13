@@ -1,0 +1,58 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-blog",
+      "blocks": {
+        "newsletter_THHw9b": {
+          "type": "newsletter",
+          "settings": {
+            "title": "Stay in the Loop!",
+            "content": "<p>Subscribe to get the latest insights, exclusive offers, and updates directly to your inbox.</p><p></p>",
+            "button_text": "Subscribe Now",
+            "subtext": "",
+            "position": 5,
+            "background": "#f7fafd",
+            "text_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "newsletter_THHw9b"
+      ],
+      "custom_css": [
+        ".blog-banner-content {padding-top: 50px; padding-bottom: 50px;}"
+      ],
+      "settings": {
+        "allow_transparent_header": false,
+        "content": "",
+        "show_newsletter_form": false,
+        "show_tags": true,
+        "banner_background": "#f7fafd",
+        "banner_text_color": "",
+        "button_background": "",
+        "button_text_color": "",
+        "articles_per_page": 6,
+        "feature_first_article": true,
+        "feature_article_background": "#f7fafd",
+        "feature_article_text_color": "#112747",
+        "show_excerpt": false,
+        "show_date": true,
+        "show_author": true,
+        "show_comments_count": true,
+        "show_category": true
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

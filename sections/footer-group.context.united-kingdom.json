@@ -1,0 +1,26 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "parent": "footer-group.json",
+  "context": {
+    "market": "united-kingdom"
+  },
+  "sections": {
+    "footer": {
+      "blocks": {
+        "text": {
+          "settings": {
+            "content": "<p>Sustainable, high-quality refurbished tech you can trust.</p><p><br/>[Email svg] Email: <a href=\"mailto:hello@yesagain.co.uk\" title=\"hello@yesagain.co.uk\">hello@yesagain.co.uk</a></p><p>[Phone svg] Phone: <a href=\"tel:+441908656700\" title=\"+44(0)1908656700\">+44(0)1908656700</a></p>"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,330 @@
+{% comment %} /sections/configurable-breadcrumbs.liquid {% endcomment %}
+
+<style>
+  .configurable-breadcrumbs-section-{{ section.id }} {
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+  }
+  .configurable-breadcrumbs-{{ section.id }} {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: {{ section.settings.font_size }}px;
+    color: {{ section.settings.text_color }};
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .configurable-breadcrumbs-{{ section.id }} li {
+    display: inline-flex; /* To align separator correctly */
+    align-items: center;
+  }
+  .configurable-breadcrumbs-{{ section.id }} li a,
+  .configurable-breadcrumbs-{{ section.id }} li .current-page {
+    color: {{ section.settings.text_color }};
+    text-decoration: none;
+  }
+  .configurable-breadcrumbs-{{ section.id }} li a:hover {
+    text-decoration: underline;
+  }
+  .configurable-breadcrumbs-{{ section.id }} .separator {
+    margin: 0 {{ section.settings.font_size | times: 0.4 | round }}px; /* Dynamic spacing based on font size */
+    color: {{ section.settings.text_color }};
+    user-select: none;
+  }
+</style>
+
+{%- liquid
+  assign final_titles_str = ""
+  assign final_links_str = ""
+  # A unique separator, unlikely to appear in titles or links
+  assign array_separator = "||--" 
+
+  for block in section.blocks limit: 4
+    assign item_title_setting = block.settings.item_title
+    assign item_link_setting = block.settings.item_link
+    assign derived_title = ''
+
+    if item_title_setting == blank and item_link_setting != blank
+      assign path_parts = item_link_setting | split: '/'
+      # Example path_parts for /products/my-handle: ["", "products", "my-handle"]
+      # Example path_parts for /blogs/news/my-article: ["", "blogs", "news", "my-article"]
+
+      if path_parts.size >= 3
+        assign object_type_slug = path_parts[1]
+        # Remove query params from handle
+        assign object_handle = path_parts[2] | split: '?' | first 
+
+        if object_type_slug == 'products' and object_handle != blank and all_products[object_handle] != blank
+          assign derived_title = all_products[object_handle].title
+        elsif object_type_slug == 'collections' and object_handle != blank and collections[object_handle] != blank
+          assign derived_title = collections[object_handle].title
+        elsif object_type_slug == 'pages' and object_handle != blank and pages[object_handle] != blank
+          assign derived_title = pages[object_handle].title
+        elsif object_type_slug == 'blogs' and object_handle != blank and blogs[object_handle] != blank
+          if path_parts.size >= 4 and path_parts[3] != blank
+            # Remove query params from article handle
+            assign article_handle = path_parts[3] | split: '?' | first
+            if article_handle != blank and blogs[object_handle].articles[article_handle] != blank
+              assign derived_title = blogs[object_handle].articles[article_handle].title
+            else 
+              # article_handle is blank or article not found, or path is /blogs/blog-handle/ (empty article part)
+              assign derived_title = blogs[object_handle].title
+            endif
+          else 
+            # Not enough parts for an article link (e.g. /blogs/blog-handle), so it's a blog link
+            assign derived_title = blogs[object_handle].title
+          endif
+        endif
+      endif
+    endif
+
+    assign title_to_display = item_title_setting
+    if title_to_display == blank and derived_title != blank
+      assign title_to_display = derived_title
+    endif
+
+    if title_to_display != blank
+      if final_titles_str == ""
+        assign final_titles_str = title_to_display
+        assign final_links_str = item_link_setting
+      else
+        assign final_titles_str = final_titles_str | append: array_separator | append: title_to_display
+        assign final_links_str = final_links_str | append: array_separator | append: item_link_setting
+      endif
+    endif
+  endfor
+
+  assign final_titles = final_titles_str | split: array_separator
+  assign final_links = final_links_str | split: array_separator
+
+  # Handle case where no breadcrumbs were added, to prevent split on empty string creating an array with one empty item
+  if final_titles_str == ""
+    # True empty array
+    assign final_titles = "" | split: "" 
+    # True empty array
+    assign final_links = "" | split: ""  
+  endif
+
+  # Prepare LD-JSON data
+  assign ld_json_items_string = ""
+  if final_titles.size > 0
+    # String to build comma-separated JSON items
+    assign temp_items_list_str = "" 
+
+    for title in final_titles
+      assign current_loop_index = forloop.index0
+      assign link_for_this_item = final_links[current_loop_index]
+      # Use a different variable name to avoid conflict with the display loop's forloop.last
+      assign is_last_visible_item_for_ld = forloop.last 
+      # 1-indexed position
+      assign item_position = forloop.index 
+
+      # Build the JSON for the current item
+      assign current_item_json_parts_str = ""
+      
+      assign part_open = '{'
+      assign part_type = '"@type": "ListItem",'
+      assign part_position = '"position": ' | append: item_position | append: ','
+      assign part_name_key = '"name": '
+      # This is already a fully quoted JSON string
+      assign part_name_value = title | json 
+      
+      assign current_item_json_parts_str = current_item_json_parts_str | append: part_open | append: part_type | append: part_position | append: part_name_key | append: part_name_value
+
+
+      unless is_last_visible_item_for_ld 
+        if link_for_this_item != blank
+          assign absolute_url = link_for_this_item
+          unless link_for_this_item contains "://" 
+            assign first_char_of_link = link_for_this_item | slice: 0, 1
+            if first_char_of_link == "/" 
+              assign absolute_url = shop.url | append: link_for_this_item
+            else
+              assign absolute_url = shop.url | append: "/" | append: link_for_this_item
+            endif
+          endunless
+          assign part_comma = ','
+          assign part_item_key = '"item": "'
+          assign part_item_value = absolute_url | append: '"'
+          assign current_item_json_parts_str = current_item_json_parts_str | append: part_comma | append: part_item_key | append: part_item_value
+        endif
+      endunless
+      
+      assign part_close = '}'
+      assign current_item_json_parts_str = current_item_json_parts_str | append: part_close
+      
+      assign captured_item_json_for_ld = current_item_json_parts_str
+
+
+      if temp_items_list_str == blank
+        assign temp_items_list_str = captured_item_json_for_ld
+      else
+        assign temp_items_list_str = temp_items_list_str | append: "," | append: captured_item_json_for_ld
+      endif
+    endfor
+    assign ld_json_items_string = temp_items_list_str
+  endif
+-%}
+
+{%- if final_titles.size > 0 -%}
+<nav class="container configurable-breadcrumbs-section-{{ section.id }}" aria-label="breadcrumb">
+  <ol class="configurable-breadcrumbs-{{ section.id }}">
+    {%- for title in final_titles -%}
+      {%- liquid
+        assign current_loop_index = forloop.index0
+        assign link_for_this_item = final_links[current_loop_index]
+        assign is_last_visible_item = forloop.last
+
+        assign render_as_link = false
+        if link_for_this_item != blank and is_last_visible_item == false
+          assign render_as_link = true
+        endif
+      -%}
+      <li>
+        {%- if render_as_link -%}
+          <a href="{{ link_for_this_item }}">{{ title | escape }}</a>
+        {%- else -%}
+          <span class="current-page" {% if is_last_visible_item %}aria-current="page"{% endif %}>
+            {{ title | escape }}
+          </span>
+        {%- endif -%}
+
+        {%- unless is_last_visible_item -%}
+          <span class="separator" aria-hidden="true">{{ section.settings.separator_icon }}</span>
+        {%- endunless -%}
+      </li>
+    {%- endfor -%}
+  </ol>
+</nav>
+
+{%- comment %} LD+JSON Structured Data for Breadcrumbs {%- endcomment %}
+{%- if ld_json_items_string != blank -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {{ ld_json_items_string }}
+  ]
+}
+</script>
+{%- endif -%}
+
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Breadcrumbs",
+  "tag": "section",
+  "class": "section-configurable-breadcrumbs",
+  "max_blocks": 4,
+  "settings": [
+    {
+      "type": "header",
+      "content": "General Settings"
+    },
+    {
+      "type": "select",
+      "id": "separator_icon",
+      "label": "Item Separator",
+      "options": [
+        { "value": "/", "label": "/" },
+        { "value": ">", "label": ">" },
+        { "value": "»", "label": "» (Double Angle Bracket)" },
+        { "value": "›", "label": "› (Single Angle Bracket)" },
+        { "value": "•", "label": "• (Dot)" },
+        { "value": "-", "label": "- (Dash)" },
+        { "value": "|", "label": "| (Pipe)" }
+      ],
+      "default": "/"
+    },
+    {
+      "type": "header",
+      "content": "Text Styling"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text Color",
+      "default": "#555555"
+    },
+    {
+      "type": "range",
+      "id": "font_size",
+      "min": 10,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "label": "Font Size",
+      "default": 14
+    },
+    {
+      "type": "header",
+      "content": "Section Padding"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "label": "Top Padding",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "label": "Bottom Padding",
+      "default": 20
+    }
+  ],
+  "blocks": [
+    {
+      "type": "breadcrumb_item",
+      "name": "Breadcrumb Level",
+      "settings": [
+        {
+          "type": "text",
+          "id": "item_title",
+          "label": "Level Name",
+          "default": "Level Name",
+          "info": "Enter name or connect a dynamic source. If left blank and a 'Level Link' to a standard Shopify page (product, collection, etc.) is provided, the title will be automatically fetched from that page."
+        },
+        {
+          "type": "url",
+          "id": "item_link",
+          "label": "Level Link",
+          "info": "Enter URL or connect a dynamic source. The last breadcrumb item in the sequence will not be linked. Other items will be linked if a URL is provided here."
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Breadcrumbs",
+      "blocks": [
+        {
+          "type": "breadcrumb_item",
+          "settings": {
+            "item_title": "Home",
+            "item_link": "/"
+          }
+        },
+        {
+          "type": "breadcrumb_item",
+          "settings": {
+            "item_title": "Current Page",
+            "item_link": ""
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

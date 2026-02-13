@@ -1,0 +1,274 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-list-collections",
+      "disabled": true,
+      "custom_css": [
+        ".content-over-media {display: block;}",
+        ".collection-card__content:first-child {margin-block-end: 0;}",
+        ".collection-card {background-color: #f7fafd; border-radius: 10px;}",
+        ".collection-card .h2 {font-size: 1.5rem;}",
+        ".collection-card img {width: 50%; margin: 50px auto 30px; height: 100%;}",
+        "@media (max-width: 699px) {.collection-card img {margin: 30px auto 20px; }}",
+        "@media (min-width: 700px) {.bg-custom {padding-top: 65px; padding-bottom: 50px; }}"
+      ],
+      "settings": {
+        "collections": [],
+        "collections_per_row_mobile": "2",
+        "collections_per_row": 4,
+        "text_color": "#041525",
+        "overlay_color": "#000000",
+        "overlay_opacity": 0
+      }
+    },
+    "slideshow_ntgxBK": {
+      "type": "slideshow",
+      "blocks": {
+        "image_P3gxJ9": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/banner-default-2.jpg",
+            "mobile_image": "shopify://shop_images/banner-default-mobile-2_1.jpg",
+            "addit_image": "shopify://shop_images/all-products1.png",
+            "content_max_width": 560,
+            "mobile_text_position": "place-self-end-start text-start",
+            "desktop_text_position": "sm:place-self-end-start sm:text-start",
+            "subheading": "Certified renewed devices - Inspected by Experts - Up to 70% cheaper than new",
+            "title": "Discover Our || Collections |||",
+            "heading_tag": "h2",
+            "button_text": "",
+            "button_link": "",
+            "text_color": "#ffffff",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "overlay_color": "#000000",
+            "overlay_opacity": 30,
+            "background": "",
+            "background_gradient": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_P3gxJ9"
+      ],
+      "custom_css": [
+        "@media (min-width: 768px) {.content-over-media > :not(img, video, iframe, svg, video-media, picture) {width: 60%; }}",
+        ".prose {display: flex; flex-direction: column;}",
+        ".prose .subheading {order: 3; margin-block-start: 15px !important; font-weight: normal;}",
+        ".prose .button {order: 5;}",
+        "@media (max-width: 767px) {.subheading {margin-right: 40%; } .content-over-media {max-height: 200px; }}"
+      ],
+      "name": "Slideshow",
+      "settings": {
+        "full_width": true,
+        "allow_transparent_header": true,
+        "show_initial_transition": false,
+        "image_size": "auto",
+        "controls_type": "dots",
+        "transition_type": "fade_with_text",
+        "autoplay": false,
+        "cycle_speed": 6,
+        "background": "#F2F2F2",
+        "background_gradient": ""
+      }
+    },
+    "collection_list_kWzMCx": {
+      "type": "collection-list",
+      "blocks": {
+        "collection_hKWDrU": {
+          "type": "collection",
+          "settings": {
+            "collection": "apple",
+            "subheading": "",
+            "title": "",
+            "url": "",
+            "heading_tag": "h4",
+            "text_position": "place-self-center text-center",
+            "text_color": "#041525",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        },
+        "collection_LDpTzt": {
+          "type": "collection",
+          "settings": {
+            "collection": "iphones",
+            "subheading": "",
+            "title": "",
+            "url": "",
+            "heading_tag": "h4",
+            "text_position": "place-self-center text-center",
+            "text_color": "#041525",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        },
+        "collection_NmiJfR": {
+          "type": "collection",
+          "settings": {
+            "collection": "ipads",
+            "subheading": "",
+            "title": "",
+            "url": "",
+            "heading_tag": "h4",
+            "text_position": "place-self-center text-center",
+            "text_color": "#041525",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        },
+        "collection_UUG4bx": {
+          "type": "collection",
+          "settings": {
+            "collection": "macbooks",
+            "subheading": "",
+            "title": "",
+            "url": "",
+            "heading_tag": "h4",
+            "text_position": "place-self-center text-center",
+            "text_color": "#041525",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        },
+        "collection_kRe7cE": {
+          "type": "collection",
+          "settings": {
+            "collection": "apple-watches",
+            "subheading": "",
+            "title": "",
+            "url": "",
+            "heading_tag": "h4",
+            "text_position": "place-self-center text-center",
+            "text_color": "#041525",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        },
+        "collection_MGAJ3P": {
+          "type": "collection",
+          "settings": {
+            "collection": "airpods",
+            "subheading": "",
+            "title": "",
+            "url": "",
+            "heading_tag": "h4",
+            "text_position": "place-self-center text-center",
+            "text_color": "#041525",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        },
+        "collection_HBkTcX": {
+          "type": "collection",
+          "settings": {
+            "collection": "desktop",
+            "subheading": "",
+            "title": "",
+            "url": "",
+            "heading_tag": "h4",
+            "text_position": "place-self-center text-center",
+            "text_color": "#041525",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        },
+        "collection_E7xFi8": {
+          "type": "collection",
+          "settings": {
+            "collection": "chromebooks",
+            "subheading": "",
+            "title": "",
+            "url": "",
+            "heading_tag": "h4",
+            "text_position": "place-self-center text-center",
+            "text_color": "#041525",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        },
+        "collection_iN8QB7": {
+          "type": "collection",
+          "settings": {
+            "collection": "laptops",
+            "subheading": "",
+            "title": "",
+            "url": "",
+            "heading_tag": "h4",
+            "text_position": "place-self-center text-center",
+            "text_color": "#041525",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        },
+        "collection_UDrawA": {
+          "type": "collection",
+          "settings": {
+            "collection": "monitors",
+            "subheading": "",
+            "title": "",
+            "url": "",
+            "heading_tag": "h4",
+            "text_position": "place-self-center text-center",
+            "text_color": "#041525",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        }
+      },
+      "block_order": [
+        "collection_hKWDrU",
+        "collection_LDpTzt",
+        "collection_NmiJfR",
+        "collection_UUG4bx",
+        "collection_kRe7cE",
+        "collection_MGAJ3P",
+        "collection_HBkTcX",
+        "collection_E7xFi8",
+        "collection_iN8QB7",
+        "collection_UDrawA"
+      ],
+      "custom_css": [
+        ".content-over-media {display: block;}",
+        ".collection-card__content:first-child {margin-block-end: 0;}",
+        ".collection-card {background-color: #f7fafd; border-radius: 10px;}",
+        ".collection-card img {width: 50%; margin: 50px auto 30px; height: 100%;}",
+        "@media (max-width: 699px) {.collection-card img {margin: 30px auto 20px; }}",
+        "@media (min-width: 700px) {.bg-custom {padding-top: 65px; padding-bottom: 50px; }}"
+      ],
+      "name": "Collection list",
+      "settings": {
+        "full_width": true,
+        "stack_collections": true,
+        "collections_metafields": false,
+        "collections_per_row_mobile": "2",
+        "collections_per_row": 4,
+        "show_progress_bar": false,
+        "subheading": "",
+        "title": "",
+        "content": "",
+        "link_url": "",
+        "link_text": "",
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "",
+        "heading_gradient": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "slideshow_ntgxBK",
+    "collection_list_kWzMCx"
+  ]
+}

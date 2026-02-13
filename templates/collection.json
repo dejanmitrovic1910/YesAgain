@@ -1,0 +1,200 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "slideshow_qYrJFE": {
+      "type": "slideshow",
+      "blocks": {
+        "image_rYn7hC": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/collection-bg-big-height_1.webp",
+            "mobile_image": "shopify://shop_images/collection-bg-big-height-mobile-2_1.webp",
+            "addit_image": "{{ collection.image }}",
+            "content_max_width": 560,
+            "mobile_text_position": "place-self-end-start text-start",
+            "desktop_text_position": "sm:place-self-end-start sm:text-start",
+            "subheading": "Certified renewed devices - Inspected by Experts - Up to 70% cheaper than new",
+            "title": "Certified Renewed || {{ collection.title }} |||",
+            "heading_tag": "h2",
+            "button_text": "",
+            "button_link": "",
+            "text_color": "#ffffff",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0,
+            "background": "",
+            "background_gradient": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_rYn7hC"
+      ],
+      "custom_css": [
+        "@media (min-width: 768px) {.content-over-media > :not(img, video, iframe, svg, video-media, picture) {width: 60%; }}",
+        ".prose {display: flex; flex-direction: column;}",
+        ".prose .subheading {order: 3; margin-block-start: 15px !important; font-weight: normal;}",
+        ".prose .button {order: 5;}",
+        "@media (max-width: 767px) {.subheading, .h2 {margin-right: 40%; }}"
+      ],
+      "settings": {
+        "full_width": true,
+        "allow_transparent_header": true,
+        "show_initial_transition": false,
+        "image_size": "auto",
+        "controls_type": "dots",
+        "transition_type": "fade_with_text",
+        "autoplay": false,
+        "cycle_speed": 6,
+        "background": "rgba(0,0,0,0)",
+        "background_gradient": ""
+      }
+    },
+    "text_with_icons_etXXid": {
+      "type": "text-with-icons",
+      "blocks": {
+        "item_3QHKDr": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-validation",
+            "mobile_icon_width": 24,
+            "icon_width": 28,
+            "icon_background_type": "circle",
+            "icon_background": "#112747",
+            "icon_color": "#ffb74a",
+            "title": "30 Days To Return",
+            "content": ""
+          }
+        },
+        "item_r7jaw4": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-secure-profile",
+            "mobile_icon_width": 24,
+            "icon_width": 28,
+            "icon_background_type": "circle",
+            "icon_background": "#112747",
+            "icon_color": "#ffb74a",
+            "title": "Warranty: Up to 2 Years",
+            "content": ""
+          }
+        },
+        "item_tJ4TfY": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-truck",
+            "mobile_icon_width": 24,
+            "icon_width": 28,
+            "icon_background_type": "circle",
+            "icon_background": "#112747",
+            "icon_color": "#ffb74a",
+            "title": "Free Delivery",
+            "content": ""
+          }
+        }
+      },
+      "block_order": [
+        "item_3QHKDr",
+        "item_r7jaw4",
+        "item_tJ4TfY"
+      ],
+      "custom_css": [
+        ".section-full {padding-top: 29px; padding-bottom: 35px;}",
+        ".text-with-icons__item {display: flex; justify-content: center; align-items: center;}",
+        ".icon-block {outline: 7px solid #ffb74a; outline-offset: -6px;}"
+      ],
+      "settings": {
+        "full_width": true,
+        "stack_on_mobile": false,
+        "title": "",
+        "heading_tag": "h6",
+        "text_alignment": "center",
+        "icon_spacing": "small",
+        "background": "#f7fafd",
+        "background_gradient": "",
+        "text_color": "#112747"
+      }
+    },
+    "banner": {
+      "type": "collection-banner",
+      "disabled": true,
+      "settings": {
+        "full_width": true,
+        "allow_transparent_header": false,
+        "enable_parallax": true,
+        "show_collection_title": true,
+        "show_collection_description": true,
+        "show_collection_image": false,
+        "collection_title_size": "h3",
+        "image_size": "auto",
+        "mobile_text_position": "place-self-center text-center",
+        "desktop_text_position": "sm:place-self-start sm:text-start",
+        "featured_product": "apple-macbook-pro-2019-i9-silver-16",
+        "featured_product_heading": "Featured product",
+        "text_color": "#ffffff",
+        "overlay_color": "#000000",
+        "overlay_opacity": 30
+      }
+    },
+    "collection_list_WntjYM": {
+      "type": "collection-list",
+      "custom_css": [
+        ".section-full {padding-top: 45px; padding-bottom: 5px;}",
+        ".content-over-media {display: block; margin: -18px 0;}",
+        ".collection-card__content:first-child {margin-block-end: 0;}",
+        ".collection-card {background-color: #f7fafd; border-radius: 10px;}",
+        ".collection-card img {width: 50%; margin: 50px auto 30px; height: 100%;}",
+        "@media (max-width: 699px) {.collection-card img {margin: 30px auto 20px; }}",
+        "@media (min-width: 700px) {.bg-custom {padding-top: 65px; padding-bottom: 50px; }}"
+      ],
+      "settings": {
+        "full_width": true,
+        "stack_collections": false,
+        "collections_metafields": true,
+        "collections_per_row_mobile": "2",
+        "collections_per_row": 7,
+        "show_progress_bar": true,
+        "subheading": "",
+        "title": "",
+        "content": "",
+        "link_url": "",
+        "link_text": "",
+        "background": "rgba(0,0,0,0)",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "",
+        "heading_gradient": ""
+      }
+    },
+    "main": {
+      "type": "main-collection",
+      "settings": {
+        "products_per_page": 24,
+        "products_per_row_mobile": "2",
+        "products_per_row_desktop": 4,
+        "filter_layout": "sidebar",
+        "show_sort_by": true,
+        "show_filters": true,
+        "show_filter_group_name": false,
+        "show_filter_values_count": true,
+        "open_first_filter_group": true
+      }
+    }
+  },
+  "order": [
+    "slideshow_qYrJFE",
+    "text_with_icons_etXXid",
+    "banner",
+    "collection_list_WntjYM",
+    "main"
+  ]
+}

@@ -1,0 +1,16 @@
+.product-title-wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 12px;
+  align-items: flex-start;
+}
+.product-title-wrapper .product-info__title {
+  flex: 1 1 auto;
+}
+.product-title-wrapper div[id*="_swish_"] {
+  flex: 0 0 48px;
+}
+
+.count-bubble {
+  color: var(--text-color);
+}

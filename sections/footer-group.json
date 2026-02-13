@@ -1,0 +1,186 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "type": "footer",
+  "name": "Footer group",
+  "sections": {
+    "text-with-icons": {
+      "type": "text-with-icons",
+      "blocks": {
+        "free-shipping": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-box",
+            "mobile_icon_width": 24,
+            "icon_width": 24,
+            "icon_background_type": "none",
+            "icon_background": "",
+            "icon_color": "",
+            "title": "Free shipping",
+            "content": "<p>Tell your customers about your shipping offer.</p>"
+          }
+        },
+        "customer-support": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-customer-support",
+            "mobile_icon_width": 24,
+            "icon_width": 24,
+            "icon_background_type": "none",
+            "icon_background": "",
+            "icon_color": "",
+            "title": "Customer service",
+            "content": "<p>Tell your customers how they can reach you.</p>"
+          }
+        },
+        "discount": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-coupon",
+            "mobile_icon_width": 24,
+            "icon_width": 24,
+            "icon_background_type": "none",
+            "icon_background": "",
+            "icon_color": "",
+            "title": "Refer a friend",
+            "content": "<p>Tell your customers about your promotional offers.</p>"
+          }
+        },
+        "payment": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-lock",
+            "mobile_icon_width": 24,
+            "icon_width": 24,
+            "icon_background_type": "none",
+            "icon_background": "",
+            "icon_color": "",
+            "title": "Secure payment",
+            "content": "<p>Tel your customers about your payment methods.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "free-shipping",
+        "customer-support",
+        "discount",
+        "payment"
+      ],
+      "disabled": true,
+      "settings": {
+        "full_width": true,
+        "stack_on_mobile": false,
+        "title": "",
+        "heading_tag": "h6",
+        "text_alignment": "center",
+        "icon_spacing": "small",
+        "background": "",
+        "background_gradient": "",
+        "text_color": ""
+      }
+    },
+    "newsletter_PJkqiU": {
+      "type": "newsletter",
+      "custom_css": [
+        ".section-full {margin-top: 50px; padding: 15px 0 15px;}",
+        ".newsletter-box {padding-top: 0; padding-bottom: 0;}",
+        ".newsletter > img {max-height: 300px; object-fit: contain;}"
+      ],
+      "name": "Newsletter",
+      "settings": {
+        "full_width": true,
+        "image": "shopify://shop_images/subscribe_icon_2-3_1.png",
+        "show_icon": false,
+        "title": "Get More from YesAgain",
+        "content": "<p>Subscribe to our newsletter and receive regular updates, special deals, and helpful tips on choosing your next refurbished device.</p>",
+        "button_text": "Sign Me Up",
+        "subtext": "",
+        "background": "#f7fafd",
+        "background_gradient": "",
+        "text_color": "",
+        "button_background": "",
+        "button_text_color": ""
+      }
+    },
+    "footer": {
+      "type": "footer",
+      "blocks": {
+        "text": {
+          "type": "text",
+          "settings": {
+            "image": "shopify://shop_images/yes-again-logo-white-orange_1.png",
+            "image_width": 120,
+            "title": "",
+            "content": "<p>Sustainable, high-quality refurbished tech you can trust.</p><p><br/>[Email svg] Email: <a href=\"mailto:hello@yesagain.com\" title=\"mailto:hello@yesagain.com\">hello@yesagain.com</a></p><p>[Phone svg] Phone: <a href=\"tel:+33187661011\" title=\"tel:+33(0)187661011\">+33(0)187661011</a></p>",
+            "enable_follow_on_shop": true
+          }
+        },
+        "links": {
+          "type": "links",
+          "settings": {
+            "menu": "about-us",
+            "show_menu_title": true,
+            "menu_title": ""
+          }
+        },
+        "links_w7aWaU": {
+          "type": "links",
+          "settings": {
+            "menu": "information",
+            "show_menu_title": true,
+            "menu_title": ""
+          }
+        },
+        "links_yiBMiE": {
+          "type": "links",
+          "settings": {
+            "menu": "account",
+            "show_menu_title": true,
+            "menu_title": ""
+          }
+        },
+        "newsletter": {
+          "type": "newsletter",
+          "settings": {
+            "image_width": 150,
+            "heading_size": "h3",
+            "title": "Sign up for new stories and personal offers",
+            "content": ""
+          }
+        }
+      },
+      "block_order": [
+        "text",
+        "links",
+        "links_w7aWaU",
+        "links_yiBMiE",
+        "newsletter"
+      ],
+      "custom_css": [
+        ".bold11 {color: #ffb74a;}",
+        ".social-media svg * {fill: #ffb74a;}"
+      ],
+      "settings": {
+        "show_social_media": true,
+        "show_payment_icons": true,
+        "show_policy_links": true,
+        "show_country_selector": true,
+        "show_country_flag": true,
+        "show_country_name": true,
+        "show_locale_selector": true
+      }
+    }
+  },
+  "order": [
+    "text-with-icons",
+    "newsletter_PJkqiU",
+    "footer"
+  ]
+}

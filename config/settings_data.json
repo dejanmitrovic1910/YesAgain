@@ -1,0 +1,236 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "current": {
+    "section_vertical_spacing": "medium",
+    "button_border_radius": 8,
+    "input_border_radius": 8,
+    "icon_stroke_width": 1.5,
+    "button_style": "fill",
+    "text_color": "#041525",
+    "header_background": "#ffffff",
+    "header_text_color": "#112747",
+    "footer_background": "#112747",
+    "footer_text_color": "#ffffff",
+    "primary_button_background": "#ffb74a",
+    "primary_button_text_color": "#ffffff",
+    "secondary_button_background": "#112747",
+    "product_card_text_color": "#041525",
+    "product_on_sale_accent": "#f83a3a",
+    "product_sold_out_badge_background": "#041525",
+    "product_primary_badge_background": "#112747",
+    "heading_font": "montserrat_n4",
+    "heading_font_size": "small",
+    "heading_letter_spacing": 2,
+    "text_font": "quicksand_n4",
+    "text_font_size_mobile": 16,
+    "text_font_size_desktop": 18,
+    "color_swatch_config": "Red: #FF0000\nGreen: #00FF00\nBlue: #0000FF\nBlack: #000000\nWhite: #FFFFFF\nGray: #808080\nYellow: #FFFF00\nOrange: #FFA500\nPurple: #800080\nPink: #FFC0CB\nBrown: #A52A2A\nBeige: #F5F5DC\nNavy: #000080\nTeal: #008080\nCyan: #00FFFF\nSpace Grey: #4B4B4F\nSpace Gray: #4B4B4F\nSpace Black: #1C1C1E\nStarlight: #FBEED9\nRose Gold: #B76E79\nGold: #D4AF37\nSilver: #C0C0C0\nMidnight: #1A1A2E\nSky Blue: #87CEEB\n(PRODUCT)RED: #B00D23\n(PRODUCT) RED: #B00D23",
+    "show_vendor": false,
+    "show_product_rating": true,
+    "show_discount": true,
+    "discount_mode": "percentage",
+    "product_color_display": "swatch",
+    "product_image_aspect_ratio": "square",
+    "product_info_alignment": "start",
+    "cart_icon": "shopping_cart",
+    "social_facebook": "https://www.facebook.com/",
+    "social_twitter": "https://x.com/",
+    "social_instagram": "https://www.instagram.com/",
+    "social_youtube": "https://www.youtube.com/",
+    "favicon": "shopify://shop_images/YesAgain-Emblem.gif",
+    "appearance_and_spacing": {
+      "page_width": 1600,
+      "section_vertical_spacing": "medium",
+      "section_boxed_horizontal_spacing": "medium",
+      "button_border_radius": 4,
+      "input_border_radius": 0,
+      "block_border_radius": 0,
+      "block_shadow_opacity": 0,
+      "block_shadow_horizontal_offset": 0,
+      "block_shadow_vertical_offset": 0,
+      "block_shadow_blur": 50,
+      "icon_thickness": 2,
+      "icon_style": "duo-tone",
+      "button_style": "fill",
+      "button_hover_effect": "fade"
+    },
+    "colors": {
+      "global_background": "#FFFFFF",
+      "global_text": "#041525",
+      "header_background": "#041525",
+      "header_text": "#FFFFFF",
+      "footer_background": "#F2F2F2",
+      "footer_text": "#041525",
+      "modal_background": "#FFFFFF",
+      "primary_button_background": "#FBB03B",
+      "primary_button_text": "#FFFFFF",
+      "secondary_button_background": "#FFFFFF",
+      "secondary_button_text": "#041525",
+      "product_card_background": "#FFFFFF",
+      "product_card_text": "#041525",
+      "product_card_on_sale_accent": "#FBB03B",
+      "product_card_custom_badge_background": "#041525",
+      "star_rating": "#ffb74a",
+      "sold_out_badge_background": "#000000"
+    },
+    "typography": {
+      "heading_font": "quicksand_n7",
+      "heading_font_size": "medium",
+      "heading_text_transform": "none",
+      "heading_letter_spacing": 0,
+      "text_font": "quicksand_n4",
+      "text_font_size_desktop": 16,
+      "text_font_size_mobile": 14,
+      "body_letter_spacing": 0
+    },
+    "currency_format": {
+      "currency_code_enabled": false
+    },
+    "animation": {
+      "zoom_image_on_hover": true,
+      "reveal_products_one_by_one": true,
+      "reduce_drawer_animation": false,
+      "reduce_header_menu_animation": false,
+      "heading_apparition": "split_rotation"
+    },
+    "color_swatch": {
+      "color_swatch_style": "round"
+    },
+    "product_card_settings": {
+      "show_vendor": false,
+      "show_secondary_image_on_hover": true,
+      "show_quick_buy": true,
+      "show_product_rating": false,
+      "product_rating_mode": "average",
+      "show_sold_out_badge": true,
+      "show_discount_badge": true,
+      "discount_mode": "percentage",
+      "product_colour_display": "swatch",
+      "product_image_aspect_ratio": "square",
+      "product_info_alignment": "left"
+    },
+    "cart_settings": {
+      "cart_type": "confirmation_popup",
+      "cart_icon": "shopping_bag",
+      "empty_button_link": "/collections/all",
+      "show_shipping_bar": false,
+      "free_shipping_min_amount": 50
+    },
+    "social_media_links": {
+      "social_facebook": "",
+      "social_twitter": "",
+      "social_threads": "",
+      "social_pinterest": ""
+    },
+    "content_for_index": [],
+    "blocks": {
+      "15405363926663611884": {
+        "type": "shopify://apps/trustview/blocks/app_embed_script/bda8b0f7-273b-4b6e-ab43-02c3fec9d11a",
+        "disabled": false,
+        "settings": {
+          "widget_language": "en-US"
+        }
+      },
+      "14197025361042770389": {
+        "type": "shopify://apps/swish-formerly-wishlist-king/blocks/app-settings-main/194f5011-a43c-4b22-b12e-eaf20dc4506a",
+        "disabled": false,
+        "settings": {
+          "theme_preset": "dawn",
+          "color_accent_1": "#000000",
+          "color_accent_2": "#000000",
+          "color_solid_button_label": "#FFFFFF",
+          "color_outline_button_label": "#000000",
+          "color_background_1": "#FFFFFF",
+          "color_background_2": "#FFFFFF",
+          "color_text": "#000000",
+          "button_min_height": 45,
+          "button_border_width": 1,
+          "button_border_radius": 0,
+          "input_min_height": 45,
+          "input_border_width": 1,
+          "input_border_radius": 0,
+          "shadow_opacity": 15,
+          "shadow_horizontal_offset": 0,
+          "shadow_vertical_offset": 2,
+          "shadow_blur": 4,
+          "font_text_scale": 100,
+          "access_mode": "UNRESTRICTED",
+          "wishlist_mode": "PRODUCT",
+          "wishlist_path": "/apps/wishlist",
+          "money_show_currency_code": true
+        }
+      },
+      "4139971114690857691": {
+        "type": "shopify://apps/swish-formerly-wishlist-king/blocks/wishlist-button-collection/194f5011-a43c-4b22-b12e-eaf20dc4506a",
+        "disabled": false,
+        "settings": {
+          "button_style": "plain_accent_1",
+          "button_placement": "top-end",
+          "button_offset_horizontal": 0,
+          "button_offset_vertical": 0,
+          "button_background_opacity": 85,
+          "button_background_size": 34,
+          "button_background_border_radius": 24,
+          "button_border_width": 1,
+          "show_shadow": false,
+          "icon_size": 18,
+          "icon_stroke_width": 1,
+          "app_integration_preset": "none",
+          "product_link_selector": "",
+          "floating_reference_js": ""
+        }
+      },
+      "6680288666557934739": {
+        "type": "shopify://apps/swish-formerly-wishlist-king/blocks/wishlist-page/194f5011-a43c-4b22-b12e-eaf20dc4506a",
+        "disabled": false,
+        "settings": {
+          "column_width": "md",
+          "wishlist_empty_link": "shopify://collections/all",
+          "page_max_width": 1200,
+          "page_padding_top": 30,
+          "page_padding_bottom": 80,
+          "show_share_button": true,
+          "show_buy_all_button": false,
+          "show_clear_wishlist_button": false,
+          "add_to_cart_remove_from_wishlist": false,
+          "remove_button_style": "icon",
+          "product_options": "dropdowns",
+          "cta_button": "add_to_cart",
+          "cta_button_style": "solid_accent_1",
+          "alignment": "center",
+          "image_aspect_ratio": "1/1",
+          "image_object_fit": "cover",
+          "show_vendor": false,
+          "show_product_title": true,
+          "show_price": true,
+          "show_variant_input_label": false
+        }
+      },
+      "13655089695959051254": {
+        "type": "shopify://apps/swish-formerly-wishlist-king/blocks/code-access/194f5011-a43c-4b22-b12e-eaf20dc4506a",
+        "disabled": false,
+        "settings": {
+          "version": "main"
+        }
+      },
+      "14060646107696862457": {
+        "type": "shopify://apps/judge-me-reviews/blocks/judgeme_core/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+        "disabled": false,
+        "settings": {}
+      },
+      "3720565183479497137": {
+        "type": "shopify://apps/globo-product-option/blocks/app-embed-block/fdc9fad5-1a0f-4bd4-9c8a-1af6a6eef6b8",
+        "disabled": false,
+        "settings": {}
+      }
+    }
+  }
+}

@@ -1,0 +1,185 @@
+<!-- PRODUCT SPECS SNIPPET -->
+{% assign specs_order = "
+brand,
+mpn,
+release_year,
+product_color,
+computer-form,
+operating_system,
+case-color,
+case-type,
+case_material,
+case_size,
+band-color,
+band_type,
+watch-material,
+mobile-phone-case-features,
+mobile-phone-form-factor,
+watch-display,
+screen_size,
+screen_type,
+screen_resolution,
+display-technology,
+processor_brand,
+processor-family,
+processor_speed,
+cpu_cores,
+gpu_cores,
+graphics_card,
+graphics_card_type,
+graphics_card_memory,
+storage_capacity,
+storage_type,
+ram,
+memory-form-factor,
+memory-technology,
+ram_type,
+optical_drive,
+optical-drive-type,
+touch_screen,
+biometric-authentication-method,
+ingress-protection-ip-rating,
+removable-storage-formats-supported,
+touch_bar,
+touch_id,
+ethernet,
+bluetooth,
+bluetooth_version,
+wifi,
+wifi_technology,
+built_in_speaker,
+webcam,
+front_camera,
+main_camera,
+audio_jack,
+headphone-jack-type,
+headphone-style,
+microphone,
+audio-connectivity,
+microphone-type,
+cellular,
+cellular_network,
+data-network,
+sim-card-capability,
+sim-card-type-1,
+sim-card-type-2,
+subscription-type,
+connection-type,
+connectivity-technology,
+ports,
+battery_life_hrs,
+battery_capacity,
+battery_type,
+battery_technology,
+charging-interface-type,
+power-source,
+wireless-charging-standard,
+keyboard-type,
+dimensions_in,
+dimensions_cm,
+width,
+height,
+length,
+dimensions,
+weight,
+earphone-features,
+smart-watch-features
+" | split: "," %}
+
+<table class="product-specs-table">
+  <tbody>
+
+    {%- assign specs_map = "
+      product_color:product_color|color-pattern,
+      screen_resolution:screen_resolution|display-resolution,
+      processor-family:processor-family|processor_type,
+      operating_system:operating_system|operating-system,
+      graphics_card_type:graphics_card_type|graphics-card-type,
+      storage_type:storage_type|storage-types-supported,
+      connection-type:connection-type|connectivity_type,
+      battery_technology:battery_technology|battery-technology
+    " | strip | split: "," -%}
+
+    {% for key in specs_order %}
+      {% assign k = key | strip | downcase %}
+      {% assign field = nil %}
+      {% assign has_alias = false %}
+
+      {%- comment -%} 1) Tentative via mapping (doublons sémantiques) {%- endcomment -%}
+      {% for map in specs_map %}
+        {% assign parts = map | split: ":" %}
+        {% assign canonical = parts[0] | strip | downcase %}
+
+        {% if canonical == k %}
+          {% assign has_alias = true %}
+          {% assign aliases = parts[1] | split: "|" %}
+
+          {% for alias in aliases %}
+            {% assign a = alias | strip | downcase %}
+
+            {% if field == nil and product.metafields.specs[a] and product.metafields.specs[a].value != blank %}
+              {% assign field = product.metafields.specs[a] %}
+            {% elsif field == nil and product.metafields.shopify[a] and product.metafields.shopify[a].value != blank %}
+              {% assign field = product.metafields.shopify[a] %}
+            {% endif %}
+          {% endfor %}
+        {% endif %}
+      {% endfor %}
+
+      {%- comment -%} 2) Fallback standard si pas de doublon {%- endcomment -%}
+      {% if field == nil and has_alias == false %}
+        {% if product.metafields.specs[k] and product.metafields.specs[k].value != blank %}
+          {% assign field = product.metafields.specs[k] %}
+        {% elsif product.metafields.shopify[k] and product.metafields.shopify[k].value != blank %}
+          {% assign field = product.metafields.shopify[k] %}
+        {% endif %}
+      {% endif %}
+
+      {% if field %}
+        <tr>
+          {%- assign fallback_label = k
+            | replace: "_", " "
+            | replace: "-", " "
+            | capitalize
+          -%}
+
+          <th>
+            {{ 'product_specs.' | append: k | t | default: fallback_label }}
+          </th>
+
+          <td>
+            {% case field.type %}
+
+              {% when 'boolean' %}
+                {% if field.value %}
+                  <svg xmlns="http://www.w3.org/2000/svg"
+                       width="16"
+                       height="16"
+                       class="spec-true"
+                       viewBox="0 0 16 16"
+                       aria-hidden="true">
+                    <path d="M13.485 1.929a1.5 1.5 0 0 1 0 2.122l-7.071 7.071-3.536-3.536a1.5 1.5 0 1 1 2.122-2.122l1.414 1.414 5.657-5.657a1.5 1.5 0 0 1 2.122 0z"/>
+                  </svg>
+                {% else %}
+                  —
+                {% endif %}
+
+              {% when 'list.metaobject_reference' %}
+                {% for obj in field.value %}
+                  {{ obj.label }}{% unless forloop.last %}, {% endunless %}
+                {% endfor %}
+
+              {% when 'metaobject_reference' %}
+                {{ field.value.label }}
+
+              {% else %}
+                {{ field.value }}
+
+            {% endcase %}
+          </td>
+        </tr>
+      {% endif %}
+
+    {% endfor %}
+  </tbody>
+</table>

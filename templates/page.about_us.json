@@ -1,0 +1,716 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "content_width": "80ch"
+      }
+    },
+    "rich_text_Wd76BN": {
+      "type": "rich-text",
+      "blocks": {
+        "subheading_HLLhCk": {
+          "type": "subheading",
+          "settings": {
+            "text": "About us"
+          }
+        },
+        "heading_YkD6at": {
+          "type": "heading",
+          "settings": {
+            "text": "Who we are",
+            "heading_tag": "h1",
+            "text_color": "",
+            "gradient": ""
+          }
+        },
+        "richtext_GxRhVx": {
+          "type": "richtext",
+          "settings": {
+            "content": "<p>At <strong>YesAgain</strong>, we specialize in premium refurbished MacBooks, laptops, and IT devices. With over 40 years of expertise and a global presence across the UK, Belgium, and the UAE, we deliver reliable technology that meets original performance standards—at a fraction of the cost.</p><p>Our mission is to make high-quality tech accessible while reducing electronic waste. As the UK’s largest Microsoft Authorized Refurbisher, we combine sustainability with innovation to lead the future of Green IT.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "subheading_HLLhCk",
+        "heading_YkD6at",
+        "richtext_GxRhVx"
+      ],
+      "settings": {
+        "full_width": false,
+        "content_width": "medium",
+        "text_position": "center",
+        "background": "rgba(0,0,0,0)",
+        "background_gradient": "",
+        "text_color": ""
+      }
+    },
+    "text_with_icons_eMxqfX": {
+      "type": "text-with-icons",
+      "blocks": {
+        "item_TaQ4nC": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-star",
+            "mobile_icon_width": 24,
+            "icon_width": 32,
+            "icon_background_type": "circle",
+            "icon_background": "#ffb74a",
+            "icon_color": "#112747",
+            "title": "Premium Quality",
+            "content": "<p>Refurbished to manufacturer standards for lasting, reliable performance.</p>"
+          }
+        },
+        "item_KyHhLq": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-coupon",
+            "mobile_icon_width": 24,
+            "icon_width": 32,
+            "icon_background_type": "circle",
+            "icon_background": "#ffb74a",
+            "icon_color": "#112747",
+            "title": "Competitive Pricing",
+            "content": "<p>Unbeatable prices on premium electronics for maximum value every purchase.</p>"
+          }
+        },
+        "item_6UarY8": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-validation",
+            "mobile_icon_width": 24,
+            "icon_width": 32,
+            "icon_background_type": "circle",
+            "icon_background": "#ffb74a",
+            "icon_color": "#112747",
+            "title": "Warranty Assurance",
+            "content": "<p>Two-year warranty plus round-the-clock support for complete peace of mind.</p>"
+          }
+        },
+        "item_nTpFMY": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-earth",
+            "mobile_icon_width": 24,
+            "icon_width": 32,
+            "icon_background_type": "circle",
+            "icon_background": "#ffb74a",
+            "icon_color": "#112747",
+            "title": "Global Trust",
+            "content": "<p>Trusted by thousands worldwide; enjoy free shipping across the UK and beyond.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "item_TaQ4nC",
+        "item_KyHhLq",
+        "item_6UarY8",
+        "item_nTpFMY"
+      ],
+      "settings": {
+        "full_width": true,
+        "stack_on_mobile": false,
+        "title": "",
+        "heading_tag": "h4",
+        "text_alignment": "center",
+        "icon_spacing": "medium",
+        "background": "#ffffff",
+        "background_gradient": "",
+        "text_color": ""
+      }
+    },
+    "impact_text_cYdX4Y": {
+      "type": "impact-text",
+      "blocks": {
+        "item_zkEHd8": {
+          "type": "item",
+          "settings": {
+            "title": "45",
+            "subheading": "Years In Business Since 1980",
+            "content": "",
+            "button_text": "",
+            "button_url": "",
+            "animate_impact_text": true,
+            "animate_impact_text_duration": 2
+          }
+        },
+        "item_aNaEqB": {
+          "type": "item",
+          "settings": {
+            "title": "110",
+            "subheading": "Professional Certified Technicians",
+            "content": "",
+            "button_text": "",
+            "button_url": "",
+            "animate_impact_text": true,
+            "animate_impact_text_duration": 2
+          }
+        },
+        "item_yiEUmh": {
+          "type": "item",
+          "settings": {
+            "title": "60 000",
+            "subheading": "Devices Refurbished Last Year",
+            "content": "",
+            "button_text": "",
+            "button_url": "",
+            "animate_impact_text": true,
+            "animate_impact_text_duration": 2
+          }
+        }
+      },
+      "block_order": [
+        "item_zkEHd8",
+        "item_aNaEqB",
+        "item_yiEUmh"
+      ],
+      "settings": {
+        "full_width": true,
+        "stack_mobile": true,
+        "text_alignment": "center",
+        "impact_text_style": "fill",
+        "text_divider": "none",
+        "impact_text_size_ratio": 0.8,
+        "background": "#f7fafd",
+        "background_gradient": "",
+        "heading_text_color": "#fbb03b",
+        "heading_gradient": "",
+        "text_color": "#1a1a1a",
+        "button_background": "",
+        "button_text_color": ""
+      }
+    },
+    "multi_column_FG3jP6": {
+      "type": "multi-column",
+      "blocks": {
+        "item_8VWNAb": {
+          "type": "item",
+          "settings": {
+            "show_controls": false,
+            "column_size": "4",
+            "title": "60,000",
+            "heading_tag": "h1",
+            "content": "<p>Refurbished laptops <br/>last year</p>",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "link"
+          }
+        },
+        "item_aFrN43": {
+          "type": "item",
+          "settings": {
+            "show_controls": false,
+            "column_size": "4",
+            "title": "Microsoft",
+            "heading_tag": "h1",
+            "content": "<p>The largest MAR <br/>in the UK</p>",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "link"
+          }
+        },
+        "item_mwAiPn": {
+          "type": "item",
+          "settings": {
+            "show_controls": false,
+            "column_size": "4",
+            "title": "110",
+            "heading_tag": "h1",
+            "content": "<p>Staff members</p>",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "link"
+          }
+        },
+        "item_7eK3jx": {
+          "type": "item",
+          "settings": {
+            "show_controls": false,
+            "column_size": "4",
+            "title": "Amazon",
+            "heading_tag": "h1",
+            "content": "<p>The largest partner</p>",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "button"
+          }
+        }
+      },
+      "block_order": [
+        "item_8VWNAb",
+        "item_aFrN43",
+        "item_mwAiPn",
+        "item_7eK3jx"
+      ],
+      "disabled": true,
+      "custom_css": [
+        ".text-start {color: #fbb03b;}",
+        ".prose {color: #041525;}"
+      ],
+      "settings": {
+        "full_width": false,
+        "stack_on_mobile": true,
+        "gap": "medium",
+        "text_alignment": "start",
+        "subheading": "",
+        "title": "Values",
+        "content": "",
+        "background": "#ffffff",
+        "background_gradient": "",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "media_with_text_FA4Kqt": {
+      "type": "media-with-text",
+      "blocks": {
+        "image_xGeBde": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/our_mission-3_1.jpg",
+            "media_width": 50,
+            "media_position": "end",
+            "text_position": "place-self-center-start text-start",
+            "icon": "none",
+            "icon_width": 48,
+            "subheading": "",
+            "title": "Our Mission",
+            "content": "<p>At <strong>YesAgain</strong>, our mission is to make premium technology accessible, sustainable, and affordable. We give new life to used devices—especially MacBooks and laptops—through a rigorous refurbishment process that meets the highest standards of performance and reliability.</p><p>We’re not just reducing e-waste—we’re reshaping how people think about tech. By extending product lifecycles and promoting smarter consumption, we help individuals, schools, and businesses embrace a greener, more responsible digital future.</p>",
+            "link_text": "",
+            "link_url": "",
+            "background": "#ffffff",
+            "background_gradient": "",
+            "text_color": "#041525",
+            "text_gradient": "",
+            "button_background": "",
+            "button_text_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_xGeBde"
+      ],
+      "settings": {
+        "full_width": false,
+        "alternate_media_position": false,
+        "spacing": "small"
+      }
+    },
+    "media_with_text_ebCGbi": {
+      "type": "media-with-text",
+      "blocks": {
+        "image_KHRqwi": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/our-vision-2_1.jpg",
+            "media_width": 50,
+            "media_position": "start",
+            "text_position": "place-self-center-start text-start",
+            "icon": "none",
+            "icon_width": 48,
+            "subheading": "",
+            "title": "Our Vision",
+            "content": "<p>The vision is simple yet bold — to make high-quality technology universally accessible without compromising the planet. Refurbished devices shouldn’t be a second choice, but a smart, sustainable first step toward a more responsible digital future.</p><p>By challenging outdated perceptions and embracing innovation, the aim is to lead a global shift toward circular technology. This means empowering people, organizations, and entire markets to choose performance and sustainability hand in hand.</p>",
+            "link_text": "",
+            "link_url": "",
+            "background": "#ffffff",
+            "background_gradient": "",
+            "text_color": "#041525",
+            "text_gradient": "",
+            "button_background": "",
+            "button_text_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_KHRqwi"
+      ],
+      "settings": {
+        "full_width": false,
+        "alternate_media_position": false,
+        "spacing": "small"
+      }
+    },
+    "images_with_text_scrolling_kLfVy8": {
+      "type": "images-with-text-scrolling",
+      "blocks": {
+        "item_aFMt6g": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/our_mission-2_1.jpg",
+            "icon": "none",
+            "icon_width": 48,
+            "title": "Our Mission",
+            "content": "<p>At <strong>YesAgain</strong>, our mission is to make premium technology accessible, sustainable, and affordable. We give new life to used devices—especially MacBooks and laptops—through a rigorous refurbishment process that meets the highest standards of performance and reliability.</p><p>We’re not just reducing e-waste—we’re reshaping how people think about tech. By extending product lifecycles and promoting smarter consumption, we help individuals, schools, and businesses embrace a greener, more responsible digital future.</p>"
+          }
+        },
+        "item_gYCCCA": {
+          "type": "item",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/our-vision-1_1.jpg",
+            "icon": "none",
+            "icon_width": 48,
+            "title": "Our Vision",
+            "content": "<p>The vision is simple yet bold — to make high-quality technology universally accessible without compromising the planet. Refurbished devices shouldn’t be a second choice, but a smart, sustainable first step toward a more responsible digital future.</p><p>By challenging outdated perceptions and embracing innovation, the aim is to lead a global shift toward circular technology. This means empowering people, organizations, and entire markets to choose performance and sustainability hand in hand.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "item_aFMt6g",
+        "item_gYCCCA"
+      ],
+      "disabled": true,
+      "settings": {
+        "full_width": false,
+        "stack_on_mobile": false,
+        "show_counter": false,
+        "desktop_image_effect": "reveal",
+        "image_position": "end",
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "#1a1a1a",
+        "heading_gradient": ""
+      }
+    },
+    "images_with_text_scrolling_MnC8q3": {
+      "type": "images-with-text-scrolling",
+      "blocks": {
+        "item_BCgEQe": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/our-vision-1_1.jpg",
+            "icon": "none",
+            "icon_width": 48,
+            "title": "Our Vision",
+            "content": "<p>The vision is simple yet bold — to make high-quality technology universally accessible without compromising the planet. Refurbished devices shouldn’t be a second choice, but a smart, sustainable first step toward a more responsible digital future.</p><p>By challenging outdated perceptions and embracing innovation, the aim is to lead a global shift toward circular technology. This means empowering people, organizations, and entire markets to choose performance and sustainability hand in hand.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "item_BCgEQe"
+      ],
+      "disabled": true,
+      "settings": {
+        "full_width": true,
+        "stack_on_mobile": false,
+        "show_counter": false,
+        "desktop_image_effect": "reveal",
+        "image_position": "start",
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "#1a1a1a",
+        "heading_gradient": ""
+      }
+    },
+    "rich_text_TrQQze": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_jq3iDE": {
+          "type": "heading",
+          "settings": {
+            "text": "Our History",
+            "heading_tag": "h2",
+            "text_color": "",
+            "gradient": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading_jq3iDE"
+      ],
+      "settings": {
+        "full_width": true,
+        "content_width": "medium",
+        "text_position": "center",
+        "background": "",
+        "background_gradient": "",
+        "text_color": ""
+      }
+    },
+    "timeline_zrwKjU": {
+      "type": "timeline",
+      "blocks": {
+        "slide_HdyFYJ": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/history-1980-1_1.jpg",
+            "navigation_label": "1980",
+            "subheading": "1980",
+            "title": "Company start",
+            "content": "<p>The story began in 1980 with a small team of IT engineers driven by a shared belief: quality technology shouldn’t have an expiration date. Initially focused on servicing and maintaining corporate computing equipment, the company earned a reputation for reliability and precision — values that would later define its refurbishment philosophy.</p><p>While the scale was modest, the vision was already ahead of its time. Long before sustainability became a trend, the company saw potential in giving used technology a second life. This foundation of technical expertise and resourcefulness became the cornerstone of what would eventually evolve into YesAgain.</p>"
+          }
+        },
+        "slide_EbEm8x": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/history-2_1.jpg",
+            "navigation_label": "2004",
+            "subheading": "2004",
+            "title": "Moving online",
+            "content": "<p>By 2004, the industry was changing rapidly — and so were customer expectations. Recognizing the growing shift toward digital access, the company took a major step by launching its first online platform. What began as a simple catalog of refurbished computers quickly became a trusted destination for budget-conscious individuals, schools, and businesses looking for reliable tech.</p><p>This transition not only expanded reach beyond traditional B2B networks but also laid the groundwork for a more customer-centric experience. From browsing to buying, everything became faster, easier, and more transparent — marking the beginning of YesAgain’s evolution into a modern, digitally driven brand.</p>"
+          }
+        },
+        "slide_wGzmyF": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/history-3_1.jpg",
+            "navigation_label": "2013",
+            "subheading": "2013",
+            "title": "Microsoft Authorized Refurbisher",
+            "content": "<p>In 2013, the company achieved a major breakthrough by becoming an official <strong>Microsoft Authorized Refurbisher (MAR)</strong> — a recognition that validated years of technical excellence and quality-first refurbishment. This milestone allowed the business to offer refurbished devices pre-installed with genuine Microsoft software, unlocking a new level of trust and value for customers across education, government, and enterprise sectors.</p><p>The MAR partnership not only elevated product standards but also positioned the company among the most reliable players in the global refurbishment industry. With enhanced compliance, licensing, and performance assurance, YesAgain was now able to deliver fully certified tech — bridging the gap between affordability and enterprise-grade quality.</p>"
+          }
+        },
+        "slide_87bMVk": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/history-4_1.jpg",
+            "navigation_label": "2015",
+            "subheading": "2015",
+            "title": "Moving to B2C",
+            "content": "<p>In 2015, the company took a bold leap by expanding into the <strong>business-to-consumer (B2C)</strong> market. Having built a strong foundation in wholesale and institutional sales, it was time to bring the same quality and affordability directly to individual customers. With a newly redesigned online store and a growing reputation for reliability, refurbished tech became more accessible than ever — not just for businesses, but for students, families, and everyday users.</p><p>This transition marked a shift in both strategy and mindset. It meant delivering not just devices, but also trust, convenience, and support. From easy-to-navigate product listings to simplified warranties and returns, the customer experience became central — solidifying YesAgain as a modern retail brand for smart, sustainable tech shopping.</p>"
+          }
+        },
+        "slide_Wnd9na": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/history-5_1.jpg",
+            "navigation_label": "2018",
+            "subheading": "2018",
+            "title": "Palm tree: Manufacturing facility",
+            "content": "<p>2018 marked the opening of <strong>Palm Tree</strong>, a state-of-the-art refurbishment and manufacturing facility that became the beating heart of YesAgain’s operational growth. Located in a modern industrial zone, the site brought together skilled engineers, advanced diagnostics equipment, and high-throughput testing processes — enabling large-scale remanufacturing with unmatched consistency and speed.</p><p>More than just a production hub, Palm Tree represented a commitment to innovation, quality, and sustainable engineering. It allowed the company to scale its capabilities, reduce turnaround times, and control the entire refurbishment lifecycle — from teardown and testing to packaging and shipping — all while maintaining strict environmental and quality standards.</p>"
+          }
+        },
+        "slide_yYGQ7P": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/history-6_1.jpg",
+            "navigation_label": "2020",
+            "subheading": "2020",
+            "title": "REBOX-IT",
+            "content": "<p>In 2020 year we introduced <strong>REBOX-IT</strong>, a specialized program aimed at streamlining the reuse of IT hardware at scale. Designed to handle bulk returns and off-lease equipment from corporations and institutions, REBOX-IT became the operational engine behind high-volume intake, diagnostics, and sorting — ensuring nothing of value was wasted.</p><p>With REBOX-IT, the company turned circular economy principles into concrete action. It enabled the recovery of thousands of devices per month, feeding the refurbishment pipeline while minimizing e-waste. The program not only improved supply efficiency but also reinforced YesAgain’s role as a sustainability-driven tech leader.</p>"
+          }
+        },
+        "slide_EXnXTB": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/history-7_1.jpg",
+            "navigation_label": "2022",
+            "subheading": "2022",
+            "title": "The Birth of YesAgain",
+            "content": "<p>2022 marked a turning point — not just in scale, but in identity. After decades of steady growth and innovation, the company united its operations, experience, and mission under a bold new name: <strong>YesAgain</strong>. The brand was born to reflect a clear vision: to give technology a second life, without compromise in quality, trust, or performance.</p><p>YesAgain became more than just a name — it became a promise. A promise to make refurbished tech accessible, aspirational, and sustainable for everyone. With a renewed digital presence, stronger B2C strategy, and a clear environmental mission, the new brand set out to reshape how people around the world think about pre-owned devices.</p>"
+          }
+        },
+        "slide_LABdMk": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/history-9_1.jpg",
+            "navigation_label": "2025",
+            "subheading": "2025",
+            "title": "Shaping the Future of Renewed Tech",
+            "content": "<p>In 2025, YesAgain stands as a leading force in the global refurbishment movement — with operations across Europe and the Middle East, a thriving B2C platform, and thousands of devices renewed and shipped every month. The brand is no longer just about refurbished laptops — it’s about setting a new standard for how technology is consumed, trusted, and reused worldwide.</p><p>With continuous investment in technology, sustainability, and customer experience, YesAgain is scaling smarter and greener than ever. From AI-assisted diagnostics to carbon tracking and traceable packaging, the company remains committed to one mission: empowering the future through second-life technology — responsibly, accessibly, and globally.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "slide_HdyFYJ",
+        "slide_EbEm8x",
+        "slide_wGzmyF",
+        "slide_87bMVk",
+        "slide_Wnd9na",
+        "slide_yYGQ7P",
+        "slide_EXnXTB",
+        "slide_LABdMk"
+      ],
+      "custom_css": [
+        ".timeline__slide {cursor: grab;}"
+      ],
+      "settings": {
+        "full_width": true,
+        "background": "#ffffff",
+        "background_gradient": "",
+        "text_color": ""
+      }
+    },
+    "testimonials_8EFPNB": {
+      "type": "testimonials",
+      "blocks": {
+        "testimonial_CajxVM": {
+          "type": "testimonial",
+          "settings": {
+            "round_avatar": true,
+            "show_rating": true,
+            "rating": 4,
+            "author": "",
+            "title": "Martin Shade",
+            "content": "<p>\"Great Product, Purchased the Laptop as a diagnostic tool, great quality and looked like new. Screen quality was fantastic....</p>"
+          }
+        },
+        "testimonial_TcDki8": {
+          "type": "testimonial",
+          "settings": {
+            "round_avatar": true,
+            "show_rating": true,
+            "rating": 5,
+            "author": "",
+            "title": "Ron Middleton",
+            "content": "<p>\"I've bought a MacBook Air from this company and I very happy with the item it's working great....</p>"
+          }
+        },
+        "testimonial_JiQytW": {
+          "type": "testimonial",
+          "settings": {
+            "round_avatar": true,
+            "show_rating": true,
+            "rating": 5,
+            "author": "",
+            "title": "Pam Hollingsbee",
+            "content": "<p>\"Great laptop at a very good price. Looked like new. Very well packed and very quick service. Highly recommend.</p>"
+          }
+        },
+        "testimonial_EyEhUj": {
+          "type": "testimonial",
+          "settings": {
+            "round_avatar": true,
+            "show_rating": true,
+            "rating": 5,
+            "author": "",
+            "title": "James",
+            "content": "<p>\"Really pleased with my MacBook Pro early 2015 Retina model. Condition and battery are exactly as described. Many thanks indeed.</p>"
+          }
+        },
+        "testimonial_Y8U3pd": {
+          "type": "testimonial",
+          "settings": {
+            "round_avatar": true,
+            "show_rating": true,
+            "rating": 5,
+            "author": "",
+            "title": "Louisa Corr",
+            "content": "<p>\"I Bought the HP Elitebook laptop and it is exactly what I hoped for - it is light, perfect condition, speed is great, it's not noisy,...</p>"
+          }
+        },
+        "testimonial_cURzrR": {
+          "type": "testimonial",
+          "settings": {
+            "round_avatar": true,
+            "show_rating": true,
+            "rating": 5,
+            "author": "",
+            "title": "mike reeves",
+            "content": "<p>\"Ordered a laptop from this company for my son for home schooling and it is a great bit of kit,..</p>"
+          }
+        },
+        "testimonial_igwUEm": {
+          "type": "testimonial",
+          "settings": {
+            "round_avatar": true,
+            "show_rating": true,
+            "rating": 5,
+            "author": "",
+            "title": "Robin Groat",
+            "content": "<p>\"Ordered a refurbished Lenovo ThinkPad and delivered in 2 days to the Highlands of Scotland...</p>"
+          }
+        },
+        "testimonial_FfFjV6": {
+          "type": "testimonial",
+          "settings": {
+            "round_avatar": true,
+            "show_rating": true,
+            "rating": 5,
+            "author": "",
+            "title": "Sarah Baldwin",
+            "content": "<p>\"Just what I expected, arrived early, and excellent value.especially with the extended warranty</p>"
+          }
+        }
+      },
+      "block_order": [
+        "testimonial_CajxVM",
+        "testimonial_TcDki8",
+        "testimonial_JiQytW",
+        "testimonial_EyEhUj",
+        "testimonial_Y8U3pd",
+        "testimonial_cURzrR",
+        "testimonial_igwUEm",
+        "testimonial_FfFjV6"
+      ],
+      "disabled": true,
+      "settings": {
+        "full_width": false,
+        "stack_testimonials": false,
+        "subheading": "",
+        "title": "Our reviews",
+        "content": "",
+        "link_url": "",
+        "link_text": "",
+        "background": "#f2f2f2",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "",
+        "heading_gradient": "",
+        "testimonial_card_background": "",
+        "testimonial_card_text_color": ""
+      }
+    },
+    "blog_posts_rMHzeD": {
+      "type": "blog-posts",
+      "blocks": {
+        "blog_hMJkLB": {
+          "type": "blog",
+          "settings": {
+            "blog": "infos",
+            "posts_count": 3,
+            "stack_items": false
+          }
+        }
+      },
+      "block_order": [
+        "blog_hMJkLB"
+      ],
+      "settings": {
+        "full_width": true,
+        "show_excerpt": true,
+        "show_date": false,
+        "show_author": false,
+        "show_comments_count": false,
+        "show_category": true,
+        "subheading": "",
+        "title": "Blog",
+        "content": "",
+        "link_url": "shopify://blogs/infos",
+        "link_text": "View all",
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "",
+        "heading_gradient": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "rich_text_Wd76BN",
+    "text_with_icons_eMxqfX",
+    "impact_text_cYdX4Y",
+    "multi_column_FG3jP6",
+    "media_with_text_FA4Kqt",
+    "media_with_text_ebCGbi",
+    "images_with_text_scrolling_kLfVy8",
+    "images_with_text_scrolling_MnC8q3",
+    "rich_text_TrQQze",
+    "timeline_zrwKjU",
+    "testimonials_8EFPNB",
+    "blog_posts_rMHzeD"
+  ]
+}

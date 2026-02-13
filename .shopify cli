@@ -1,0 +1,2 @@
+$env:SHOPIFY_FLAG_STORE="0e7d4f-3.myshopify.com"
+set SHOPIFY_FLAG_STORE=0e7d4f-3.myshopify.com

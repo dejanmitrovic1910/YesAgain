@@ -1,0 +1,119 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "content_width": "80ch"
+      }
+    },
+    "contact": {
+      "type": "contact",
+      "blocks": {
+        "text_MJLVGC": {
+          "type": "text",
+          "settings": {
+            "title": "Phone Number",
+            "use_long_text": false,
+            "required": true
+          }
+        }
+      },
+      "block_order": [
+        "text_MJLVGC"
+      ],
+      "custom_css": [
+        "input:not([type=\"button\"]),textarea {background-color: white;}"
+      ],
+      "settings": {
+        "full_width": true,
+        "subheading": "Help Center",
+        "title": "Order services now",
+        "content": "<p>If you would like more information about any of our services, feel free to complete the enquiry form below. One of our team members will then get back to you as soon as possible. Be assured that no information will be shared with a third party.</p><h2>Free consultations</h2><p>Open: Monday to Friday 9:00am to 5:00pm</p><p><strong>+441908656700<br/>support@rebox-it.co.uk</strong></p>",
+        "text_position": "start",
+        "contact_form_size": "large",
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "#112747",
+        "heading_gradient": "",
+        "contact_background": "#f7fafd",
+        "contact_text_color": "",
+        "button_background": "",
+        "button_text_color": "#ffffff"
+      }
+    },
+    "recently_viewed_products_tLewDB": {
+      "type": "recently-viewed-products",
+      "disabled": true,
+      "settings": {
+        "full_width": true,
+        "products_count": 6,
+        "stack_products": true,
+        "show_progress_bar": false,
+        "products_per_row_mobile": "1",
+        "products_per_row_desktop": 3,
+        "subheading": "",
+        "title": "Recently viewed products",
+        "content": "",
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "",
+        "heading_gradient": "",
+        "product_card_background": "",
+        "product_card_text_color": ""
+      }
+    },
+    "blog_posts_fxfAdH": {
+      "type": "blog-posts",
+      "blocks": {
+        "blog_xJVYzw": {
+          "type": "blog",
+          "settings": {
+            "blog": "infos",
+            "posts_count": 3,
+            "stack_items": false
+          }
+        }
+      },
+      "block_order": [
+        "blog_xJVYzw"
+      ],
+      "disabled": true,
+      "settings": {
+        "full_width": true,
+        "show_excerpt": true,
+        "show_date": false,
+        "show_author": false,
+        "show_comments_count": false,
+        "show_category": false,
+        "subheading": "",
+        "title": "Blog posts",
+        "content": "",
+        "link_url": "shopify://blogs/infos",
+        "link_text": "View all",
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "",
+        "heading_gradient": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "contact",
+    "recently_viewed_products_tLewDB",
+    "blog_posts_fxfAdH"
+  ]
+}
