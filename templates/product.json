@@ -24,7 +24,7 @@
           }
         },
         "swish_formerly_wishlist_king_wishlist_button_block_HNReE4": {
-          "type": "shopify://apps/swish-formerly-wishlist-king/blocks/wishlist-button-block/194f5011-a43c-4b22-b12e-eaf20dc4506a",
+          "type": "shopify://apps/swish-wishlist-king/blocks/wishlist-button-block/194f5011-a43c-4b22-b12e-eaf20dc4506a",
           "settings": {
             "button_style": "plain_accent_1",
             "button_alignment": "center",
@@ -80,7 +80,7 @@
           }
         },
         "globo_product_option_app_block_P76zgh": {
-          "type": "shopify://apps/globo-product-options-variant/blocks/app-block/fdc9fad5-1a0f-4bd4-9c8a-1af6a6eef6b8",
+          "type": "shopify://apps/globo-product-options/blocks/app-block/fdc9fad5-1a0f-4bd4-9c8a-1af6a6eef6b8",
           "settings": {}
         },
         "payment_terms": {
@@ -367,7 +367,7 @@
       "type": "apps",
       "blocks": {
         "globo_product_option_app_block_qRAHXQ": {
-          "type": "shopify://apps/globo-product-options-variant/blocks/app-block/fdc9fad5-1a0f-4bd4-9c8a-1af6a6eef6b8",
+          "type": "shopify://apps/globo-product-options/blocks/app-block/fdc9fad5-1a0f-4bd4-9c8a-1af6a6eef6b8",
           "settings": {}
         },
         "judge_me_reviews_review_widget_fMVgeD": {
