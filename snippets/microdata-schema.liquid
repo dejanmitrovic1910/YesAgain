@@ -13,8 +13,127 @@ managed at the theme level.
   <script type="application/ld+json">
     {{- article | structured_data -}}
   </script>
+  {%- comment -%}Explicit Article schema per Google's structured data guidelines{%- endcomment -%}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": {{ article.title | json }},
+    {%- if article.excerpt_or_content != blank -%}
+    "description": {{ article.excerpt_or_content | strip_html | truncate: 160 | json }},
+    {%- endif -%}
+    {%- if article.image -%}
+    "image": {
+      "@type": "ImageObject",
+      "url": {{ article.image | image_url: width: 1200 | prepend: 'https:' | json }},
+      "width": 1200,
+      "height": {{ 1200 | divided_by: article.image.aspect_ratio | round }}
+    },
+    {%- endif -%}
+    "datePublished": {{ article.published_at | date: '%Y-%m-%dT%H:%M:%S%z' | json }},
+    "dateModified": {{ article.updated_at | default: article.published_at | date: '%Y-%m-%dT%H:%M:%S%z' | json }},
+    "author": {
+      "@type": "Person",
+      "name": {{ article.author | json }}
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": {{ shop.name | json }},
+      "logo": {
+        "@type": "ImageObject",
+        "url": {%- if shop.brand.logo -%}{{ shop.brand.logo | image_url: width: 600 | prepend: 'https:' | json }}{%- else -%}{{ settings.share_image | image_url: width: 600 | prepend: 'https:' | json }}{%- endif -%}
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": {{ request.origin | append: article.url | json }}
+    }
+  }
+  </script>
 {%- endif -%}
 
+{%- comment -%}Organization markup on all pages. Logo: brand logo, share_image, or favicon. Social: theme social URL settings (same as footer).{%- endcomment -%}
+{%- assign org_logo = nil -%}
+{%- if shop.brand.logo -%}
+  {%- assign org_logo = shop.brand.logo | image_url: width: shop.brand.logo.width | prepend: 'https:' -%}
+{%- elsif settings.favicon -%}
+  {%- assign org_logo = settings.favicon | image_url: width: 512 | prepend: 'https:' -%}
+{%- endif -%}
+{%- capture org_same_as -%}
+  {%- assign first = true -%}
+  {%- if settings.social_facebook != blank -%}{% unless first %},{% endunless %}{{ settings.social_facebook | json }}{% assign first = false -%}{%- endif -%}
+  {%- if settings.social_twitter != blank -%}{% unless first %},{% endunless %}{{ settings.social_twitter | json }}{% assign first = false -%}{%- endif -%}
+  {%- if settings.social_instagram != blank -%}{% unless first %},{% endunless %}{{ settings.social_instagram | json }}{% assign first = false -%}{%- endif -%}
+  {%- if settings.social_threads != blank -%}{% unless first %},{% endunless %}{{ settings.social_threads | json }}{% assign first = false -%}{%- endif -%}
+  {%- if settings.social_pinterest != blank -%}{% unless first %},{% endunless %}{{ settings.social_pinterest | json }}{% assign first = false -%}{%- endif -%}
+  {%- if settings.social_youtube != blank -%}{% unless first %},{% endunless %}{{ settings.social_youtube | json }}{% assign first = false -%}{%- endif -%}
+  {%- if settings.social_tiktok != blank -%}{% unless first %},{% endunless %}{{ settings.social_tiktok | json }}{% assign first = false -%}{%- endif -%}
+  {%- if settings.social_vimeo != blank -%}{% unless first %},{% endunless %}{{ settings.social_vimeo | json }}{% assign first = false -%}{%- endif -%}
+  {%- if settings.social_linkedin != blank -%}{% unless first %},{% endunless %}{{ settings.social_linkedin | json }}{% assign first = false -%}{%- endif -%}
+  {%- if settings.social_snapchat != blank -%}{% unless first %},{% endunless %}{{ settings.social_snapchat | json }}{% assign first = false -%}{%- endif -%}
+  {%- if settings.social_whatsapp != blank -%}{% unless first %},{% endunless %}{{ settings.social_whatsapp | json }}{% assign first = false -%}{%- endif -%}
+  {%- if settings.social_tumblr != blank -%}{% unless first %},{% endunless %}{{ settings.social_tumblr | json }}{% assign first = false -%}{%- endif -%}
+  {%- if settings.social_wechat != blank -%}{% unless first %},{% endunless %}{{ settings.social_wechat | json }}{% assign first = false -%}{%- endif -%}
+  {%- if settings.social_reddit != blank -%}{% unless first %},{% endunless %}{{ settings.social_reddit | json }}{% assign first = false -%}{%- endif -%}
+  {%- if settings.social_line != blank -%}{% unless first %},{% endunless %}{{ settings.social_line | json }}{% assign first = false -%}{%- endif -%}
+  {%- if settings.social_spotify != blank -%}{% unless first %},{% endunless %}{{ settings.social_spotify | json }}{% assign first = false -%}{%- endif -%}
+{%- endcapture -%}
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": {{ shop.name | json }},
+    "url": {{ shop.url | json }}
+    {%- if org_logo != blank -%},
+    "logo": {{ org_logo | json }}
+    {%- endif -%}
+    {%- if shop.brand.short_description != blank -%},
+    "description": {{ shop.brand.short_description | json }}
+    {%- endif -%}
+    {%- if shop.brand.slogan != blank -%},
+    "slogan": {{ shop.brand.slogan | json }}
+    {%- endif -%}
+    {%- if org_same_as != blank -%},
+    "sameAs": [{{ org_same_as | strip }}]
+    {%- endif -%}
+    {%- if shop.email != blank -%},
+    "email": {{ shop.email | json }}
+    {%- endif -%}
+    {%- if shop.phone != blank -%},
+    "telephone": {{ shop.phone | json }}
+    {%- endif -%}
+    {%- assign addr = shop.address -%}
+    {%- if addr.address1 != blank and addr.address2 != blank -%}
+      {%- assign street_address = addr.address1 | append: ', ' | append: addr.address2 -%}
+    {%- elsif addr.address1 != blank -%}
+      {%- assign street_address = addr.address1 -%}
+    {%- elsif addr.address2 != blank -%}
+      {%- assign street_address = addr.address2 -%}
+    {%- else -%}
+      {%- assign street_address = '' -%}
+    {%- endif -%}
+    {%- if street_address != blank or addr.city != blank or addr.province != blank or addr.zip != blank or addr.country_code != blank -%},
+    "address": {
+      "@type": "PostalAddress"
+      {%- if street_address != blank -%},
+      "streetAddress": {{ street_address | json }}
+      {%- endif -%}
+      {%- if addr.city != blank -%},
+      "addressLocality": {{ addr.city | json }}
+      {%- endif -%}
+      {%- if addr.province != blank or addr.province_code != blank -%},
+      "addressRegion": {{ addr.province | default: addr.province_code | json }}
+      {%- endif -%}
+      {%- if addr.zip != blank -%},
+      "postalCode": {{ addr.zip | json }}
+      {%- endif -%}
+      {%- if addr.country_code != blank -%},
+      "addressCountry": {{ addr.country_code | json }}
+      {%- endif -%}
+    }
+    {%- endif -%}
+  }
+  </script>
 <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -70,7 +189,7 @@ managed at the theme level.
           }, {
             "@type": "ListItem",
             "position": 3,
-            "name": {{ blog.title | json }},
+            "name": {{ article.title | json }},
             "item": "{{ shop.url }}{{ article.url }}"
           }
       {%- elsif request.page_type == 'page' -%}
