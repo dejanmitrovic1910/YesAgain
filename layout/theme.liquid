@@ -14,14 +14,33 @@ NOTE TO DEVELOPERS: welcome to Impact theme! We hope that you will enjoy editing
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, height=device-height, minimum-scale=1.0, maximum-scale=1.0">
     <meta name="theme-color" content="{{ settings.header_background }}">
+    {%- comment -%}Exclude pagination pages (?page=2, etc.) from indexing{%- endcomment -%}
+    {% if current_page and current_page != 1 %}
+      <meta name="robots" content="noindex, follow">
+    {% endif %}
 
-    <title>{% if page_title == blank %}{{ shop.name }}{% else %}{{ page_title }}{% if current_page != 1 %} &ndash; {{ 'general.page' | t: page: current_page }}{% endif %}{% endif %}</title>
+    <title>{% if request.page_type == 'collection' %}Renewed {{ collection.title }} | Certified Refurbished {{ collection.title }} – {{ shop.name }}{% if current_page != 1 %} &ndash; {{ 'general.page' | t: page: current_page }}{% endif %}{% elsif page_title == blank %}{{ shop.name }}{% else %}{{ page_title }}{% if current_page != 1 %} &ndash; {{ 'general.page' | t: page: current_page }}{% endif %}{% endif %}</title>
 
-    {%- if page_description -%}
+    {%- if request.page_type == 'collection' -%}
+      <meta name="description" content="Buy refurbished {{ collection.title }} at {{ shop.name }}. Fully tested, certified refurbished devices with warranty and great value. Shop {{ collection.title }} online today.">
+    {%- elsif page_description -%}
       <meta name="description" content="{{ page_description | escape }}">
     {%- endif -%}
 
     <link rel="canonical" href="{{ canonical_url }}">
+
+    {%- comment -%}301-style redirect: first pagination page (e.g. ?page=1) to main URL{%- endcomment -%}
+    {% comment %} <script>
+      (function() {
+        var params = new URLSearchParams(window.location.search);
+        if (params.get('page') === '1') {
+          params.delete('page');
+          var newSearch = params.toString();
+          var newUrl = window.location.pathname + (newSearch ? '?' + newSearch : '') + window.location.hash;
+          window.location.replace(newUrl);
+        }
+      })();
+    </script> {% endcomment %}
 
     {%- if settings.favicon -%}
       <link rel="shortcut icon" href="{{ settings.favicon | image_url: width: 96 }}">
@@ -59,6 +78,42 @@ NOTE TO DEVELOPERS: welcome to Impact theme! We hope that you will enjoy editing
 
     <script type="module" src="{{ 'vendor.min.js' | asset_url }}"></script>
     <script type="module" src="{{ 'theme.js' | asset_url }}"></script>
+    {%- comment -%}When collection/search pagination updates via facet (no full reload), sync title and robots meta{%- endcomment -%}
+    <script>
+      document.addEventListener('facet:update', function(ev) {
+        var url = ev.detail && ev.detail.url;
+        if (!url) return;
+        var pageParam = url.searchParams.get('page');
+        var pageNum = pageParam ? parseInt(pageParam, 10) : 1;
+        if (isNaN(pageNum)) pageNum = 1;
+
+        var template = window.themeVariables && window.themeVariables.strings && window.themeVariables.strings.pageTitlePage;
+        var pageSuffix = template ? template.replace('__PAGE__', String(pageNum)) : 'Page ' + pageNum;
+        var baseTitle = document.title;
+        if (template) {
+          var placeholder = '\u0001';
+          var pattern = template.replace(/__PAGE__/g, placeholder).replace(/[.*+?^${}()|[\]\\]/g, '\\$&').replace(new RegExp(placeholder, 'g'), '\\d+');
+          var suffixRegex = new RegExp('\\s*[\u2013-]\\s*' + pattern + '\\s*$');
+          baseTitle = baseTitle.replace(suffixRegex, '').trim();
+        } else {
+          baseTitle = baseTitle.replace(/\s*[\u2013-]\s+Page\s+\d+\s*$/i, '').trim();
+        }
+        document.title = baseTitle + (pageNum > 1 ? ' \u2013 ' + pageSuffix : '');
+
+        var meta = document.querySelector('meta[name="robots"]');
+        if (pageNum > 1) {
+          if (meta) meta.setAttribute('content', 'noindex, follow');
+          else {
+            meta = document.createElement('meta');
+            meta.setAttribute('name', 'robots');
+            meta.setAttribute('content', 'noindex, follow');
+            document.head.appendChild(meta);
+          }
+        } else {
+          if (meta) meta.remove();
+        }
+      });
+    </script>
 
     {{ content_for_header }}
 
@@ -85,6 +140,9 @@ NOTE TO DEVELOPERS: welcome to Impact theme! We hope that you will enjoy editing
     {%- endif -%}
 
     <main role="main" id="main" class="anchor">
+      {%- if request.page_type == 'collection' -%}
+        <h1 class="sr-only">Refurbished {{ collection.title }}</h1>
+      {%- endif -%}
       {{ content_for_layout }}
 
       {%- comment -%}
