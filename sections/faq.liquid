@@ -101,15 +101,20 @@
     "@context": "https://schema.org",
     "@type": "FAQPage",
     "mainEntity": [
+      {%- assign faq_count = 0 -%}
       {%- for block in section.blocks -%}
-        {
-          "@type": "Question",
-          "name": {{ block.settings.title | json }},
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": {{ block.settings.content | json }}
+        {%- if block.settings.title != blank and block.settings.content != blank -%}
+          {%- assign faq_count = faq_count | plus: 1 -%}
+          {%- unless faq_count == 1 -%},{%- endunless -%}
+          {
+            "@type": "Question",
+            "name": {{ block.settings.title | json }},
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": {{ block.settings.content | strip_newlines | json }}
+            }
           }
-        }{% unless forloop.last %},{% endunless %}
+        {%- endif -%}
       {%- endfor -%}
     ]
   }

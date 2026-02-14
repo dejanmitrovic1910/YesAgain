@@ -56,8 +56,6 @@ managed at the theme level.
 {%- assign org_logo = nil -%}
 {%- if shop.brand.logo -%}
   {%- assign org_logo = shop.brand.logo | image_url: width: shop.brand.logo.width | prepend: 'https:' -%}
-{%- elsif settings.share_image -%}
-  {%- assign org_logo = settings.share_image | image_url: width: 600 | prepend: 'https:' -%}
 {%- elsif settings.favicon -%}
   {%- assign org_logo = settings.favicon | image_url: width: 512 | prepend: 'https:' -%}
 {%- endif -%}

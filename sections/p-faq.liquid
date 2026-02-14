@@ -13,7 +13,9 @@
 
 
 <div class="esp-faq-section section"
-     aria-label="{{ section.settings.title }}">
+     aria-label="{{ section.settings.title }}"
+     itemscope
+     itemtype="https://schema.org/FAQPage">
 
   {%- if st.title != blank -%}
     <h2 class="section-header__title">{{ st.title }}</h2>
@@ -78,7 +80,10 @@
           <div class="faq-elem 
                       {% if block.settings.open_answer_by_default %}active{% endif %}" 
                data-category="{{ block.settings.title | handleize }}"
-               style="display: {% if forloop.first %}block{% elsif categories != blank %}none{% endif %};">
+               style="display: {% if forloop.first %}block{% elsif categories != blank %}none{% endif %};"
+               itemscope
+               itemprop="mainEntity"
+               itemtype="https://schema.org/Question">
             <div class="question" 
                  role="button"
                  tabindex="0">
@@ -90,12 +95,14 @@
                   <span class="faq-icon">{%- render 'p-faq-icons', icon: block.settings.icon -%}</span>
                 {%- endif -%}
           
-                <span class="text">{{ block.settings.question }}</span>
+                <span class="text" itemprop="name">{{ block.settings.question }}</span>
                 
               </span>
               <span class="arrow">╲╱</span>
             </div>
-            <div class="answer">{{ block.settings.answer }}</div>
+            <div class="answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+              <div itemprop="text">{{ block.settings.answer }}</div>
+            </div>
           </div>
         {% endif %}
       {% endfor %}
@@ -282,38 +289,20 @@
   "mainEntity": [
     {%- assign step = 0 -%}
     {%- for block in section.blocks -%}
-      {%- assign question = block.settings.question | replace: '"', "'" -%}
-      {%- assign answer = block.settings.answer | replace: '"', "'" -%}
-      {%- if question != blank and answer != blank -%}
+      {%- if block.settings.question != blank and block.settings.answer != blank -%}
         {%- assign step = step | plus: 1 -%}
         {%- unless step == 1 -%},{%- endunless -%}
         {
           "@type": "Question",
-          "name": "{{ question }}",
+          "name": {{ block.settings.question | json }},
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "{{ answer }}",
-            "@id": "https://{{ request.host }}#article-answer-{{ forloop.index }}"
-          },
-          "@id": "https://{{ request.host }}#article-question-{{ forloop.index }}",
-          "url": "https://{{ request.host }}{{ page.url }}#question-{{ forloop.index }}",
-          "datePublished": "{{ 'now' | date: '%Y-%m-%d' }}",
-          "author": {
-            "@type": "Organization",
-            "name": "{{ shop.name }}"
+            "text": {{ block.settings.answer | strip_newlines | json }}
           }
         }
       {%- endif -%}
     {%- endfor -%}
-  ],
-  "publisher": {
-    "@type": "Organization",
-    "name": "{{ shop.name }}",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "{{ settings.share_image | img_url: 'master' }}"
-    }
-  }
+  ]
 }
 </script>
 

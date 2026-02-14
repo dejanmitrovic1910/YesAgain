@@ -24,7 +24,7 @@ Validate your Pinterest rich pins
   <meta property="og:title" content="{{ article.title | strip_html | escape }}">
 {%- elsif request.page_type == 'collection' -%}
   <meta property="og:type" content="website">
-  <meta property="og:title" content="{{ collection.title | strip_html | escape }}">
+  <meta property="og:title" content="Renewed {{ collection.title | strip_html | escape }} | Certified Refurbished {{ collection.title | strip_html | escape }} – {{ shop.name | escape }}">
 {%- else -%}
   <meta property="og:type" content="website">
   <meta property="og:title" content="{{ page_title | escape }}">
@@ -37,7 +37,9 @@ Validate your Pinterest rich pins
   <meta property="og:image:height" content="{{ page_image.height }}">
 {%- endif -%}
 
-{%- if page_description -%}
+{%- if request.page_type == 'collection' -%}
+  <meta property="og:description" content="Buy refurbished {{ collection.title | escape }} at {{ shop.name | escape }}. Fully tested, certified refurbished devices with warranty and great value. Shop {{ collection.title | escape }} online today.">
+{%- elsif page_description -%}
   <meta property="og:description" content="{{ page_description | escape }}">
 {%- endif -%}
 
@@ -64,8 +66,8 @@ More information:
   <meta name="twitter:title" content="{{ article.title }}">
   <meta name="twitter:description" content="{{ article.excerpt_or_content | strip_html | truncatewords: 140, '' | escape }}">
 {%- elsif request.page_type == 'collection' -%}
-  <meta name="twitter:title" content="{{ collection.title }}">
-  <meta name="twitter:description" content="{{ collection.description | strip_html | truncatewords: 140, '' | escape }}">
+  <meta name="twitter:title" content="Renewed {{ collection.title | escape }} | Certified Refurbished {{ collection.title | escape }} – {{ shop.name | escape }}">
+  <meta name="twitter:description" content="Buy refurbished {{ collection.title | escape }} at {{ shop.name | escape }}. Fully tested, certified refurbished devices with warranty and great value. Shop {{ collection.title | escape }} online today.">
 {%- else -%}
   <meta name="twitter:title" content="{{ page_title | escape }}">
   <meta name="twitter:description" content="{{ page_description | default: page_title | escape }}">
