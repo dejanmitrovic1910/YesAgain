@@ -32,6 +32,24 @@ Supported variables
 {%- form 'product', product, is: 'product-form', id: form_id -%}
   <input type="hidden" {% if variant_picker_block != blank %}disabled{% endif %} name="id" value="{{ product.selected_or_first_available_variant.id }}">
 
+  {%- if show_payment_button -%}
+    <style>
+      #{{ form_id }} .shopify-payment-button {
+        {%- unless product.selected_or_first_available_variant.available -%}
+          display: none;
+        {%- endunless -%}
+
+        {%- if payment_button_background != blank and payment_button_background != 'rgba(0,0,0,0)' -%}
+          --button-background: {{ payment_button_background.rgb }};
+        {%- endif -%}
+
+        {%- if payment_button_text_color != blank and payment_button_text_color != 'rgba(0,0,0,0)' -%}
+          --button-text-color: {{ payment_button_text_color.rgb }};
+        {%- endif -%}
+      }
+    </style>
+  {%- endif -%}
+
   {%- assign button_disabled = false -%}
   {%- assign button_size = button_size | default: 'xl' -%}
 
@@ -81,22 +99,6 @@ Supported variables
 
       {%- if show_payment_button -%}
         {{- form | payment_button -}}
-
-        <style>
-          #{{ form_id }} .shopify-payment-button {
-            {%- unless product.selected_or_first_available_variant.available -%}
-              display: none;
-            {%- endunless -%}
-
-            {%- if payment_button_background != blank and payment_button_background != 'rgba(0,0,0,0)' -%}
-              --button-background: {{ payment_button_background.rgb }};
-            {%- endif -%}
-
-            {%- if payment_button_text_color != blank and payment_button_text_color != 'rgba(0,0,0,0)' -%}
-              --button-text-color: {{ payment_button_text_color.rgb }};
-            {%- endif -%}
-          }
-        </style>
       {%- endif -%}
     </buy-buttons>
   </div>

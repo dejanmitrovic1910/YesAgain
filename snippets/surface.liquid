@@ -37,10 +37,4 @@ Supported variables
   {%- capture style -%}{{ style }} --text-color: {{ text_color.rgb }};{%- endcapture -%}
 {%- endunless -%}
 
-{%- if class != blank -%}
-  class="{{ class | strip }}"
-{%- endif -%}
-
-{%- if style != blank -%}
-  style="{{ style | strip }}"
-{%- endif -%}
+{%- if class != blank -%} class="{{ class | strip }}"{% endif -%} {%- if style != blank %} style="{{ style | strip }}"{%- endif -%}
