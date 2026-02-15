@@ -63,10 +63,4 @@ but you can override them by manually passing a different value (although this s
   {%- capture style_attributes -%}{{ style_attributes }} --input-text-color: {{ input_text_color.rgb }};{%- endcapture -%}
 {%- endunless -%}
 
-{%- if class != blank -%}
-  class="section {% if tight %}section--tight{% endif %} {% if narrow %}section--narrow{% endif %} {{ class | strip }}"
-{%- endif -%}
-
-{%- if style_attributes != blank -%}
-  style="{{ style_attributes | strip }}"
-{%- endif -%}
+{%- if class != blank -%} class="section {% if tight %}section--tight{% endif %} {% if narrow %}section--narrow{% endif %} {{ class | strip }}"{%- endif -%} {% if style_attributes != blank %} style="{{ style_attributes | strip }}"{%- endif -%}

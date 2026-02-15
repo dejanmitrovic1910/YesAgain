@@ -89,10 +89,10 @@ Supported variables
 
 {%- capture button_content -%}
   {% if icon != blank %}
-    <div class="text-with-icon justify-center">
+    <span class="text-with-icon justify-center">
       {%- render 'icon' with icon, width: 18, height: 18 -%}
       {{- content -}}
-    </div>
+    </span>
   {%- else -%}
     {{- content -}}
   {%- endif -%}
